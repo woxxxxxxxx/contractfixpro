@@ -1,0 +1,77 @@
+Build contractfixpro.com - a freelance contract generator website.
+
+TECH STACK: Pure HTML/CSS/JS, no frameworks
+THEME COLOR: #2563eb (professional blue)
+LOCAL PATH: C:\Users\Administrator\contractfixpro\
+
+=== SITE STRUCTURE ===
+
+1. index.html - Homepage
+- Header: logo "ContractFixPro" + nav links
+- Hero: "Free Freelance Contract Generator" headline + subtext
+- Category tabs: All / Freelance / Creative / Business / Legal
+- Tool cards grid (20 tools, each linking to its own page)
+- About section
+- Footer with Privacy Policy + About links
+- 2 ad slots: one below header, one above footer
+- Back to top button
+
+2. Create these 20 tool pages (each as separate HTML file):
+- freelance-contract.html
+- web-design-contract.html
+- graphic-design-contract.html
+- video-editing-contract.html
+- copywriting-contract.html
+- photography-contract.html
+- videography-contract.html
+- social-media-contract.html
+- influencer-contract.html
+- music-producer-contract.html
+- independent-contractor.html
+- consulting-agreement.html
+- virtual-assistant-contract.html
+- logo-design-contract.html
+- brand-ambassador-contract.html
+- nda-generator.html
+- service-agreement.html
+- invoice-template.html
+- client-onboarding-contract.html
+- website-maintenance-contract.html
+
+=== EACH TOOL PAGE STRUCTURE ===
+- Header + nav
+- Breadcrumb: Home > Category > Tool Name
+- Hero section with tool title + description
+- Ad slot 1 (horizontal banner)
+- CONTRACT FORM: input fields specific to each contract type (client name, contractor name, project description, payment amount, payment terms, start date, end date, governing law/state)
+- Generate Contract button
+- CONTRACT PREVIEW AREA: shows generated contract text dynamically based on form inputs
+- Download buttons: "Download PDF" + "Download Word (.docx)" - both require clicking (free preview, paid download - show alert "Premium feature - coming soon" for now)
+- Ad slot 2 (horizontal banner)
+- FAQ section (5 questions specific to each contract)
+- Related Tools section (4 related tools)
+- Footer
+
+=== CONTRACT GENERATION (JS) ===
+Each tool page must have JavaScript that:
+- Takes all form inputs
+- Generates a professional, complete contract text in the preview area
+- Contract must be properly formatted with sections: AGREEMENT, PARTIES, SCOPE OF WORK, PAYMENT TERMS, TIMELINE, INTELLECTUAL PROPERTY, CONFIDENTIALITY, TERMINATION, GOVERNING LAW
+- Updates preview in real-time as user types
+
+=== SEO ===
+Each page needs:
+- Unique title tag: "[Tool Name] - Free Generator | ContractFixPro"
+- Meta description
+- H1 matching the tool name
+- Canonical URL
+
+=== OTHER FILES ===
+- robots.txt (allow all, include sitemap)
+- sitemap.xml (all 21 pages)
+- privacy.html
+- 404.html
+- ads.txt: google.com, pub-1638874323475457, DIRECT, f08c47fec0942fa0
+
+=== PUSH WHEN DONE ===
+cd C:\Users\Administrator\contractfixpro && git add -A && git commit -m "initial build: contractfixpro complete site" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master

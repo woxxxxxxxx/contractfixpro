@@ -3,9 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon - ContractFixPro</title>
+<title>ContractFixPro - Free Freelance Contract Generator</title>
+<meta name="description" content="Generate free professional freelance contracts, NDAs, service agreements and more. 20+ contract templates for freelancers, designers, photographers and businesses.">
+<link rel="canonical" href="https://contractfixpro.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PLACEHOLDER');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2563eb;--primary-dark:#1d4ed8;--primary-light:#eff6ff;--primary-dim:rgba(37,99,235,.08);--bg:#f8fafc;--bg2:#fff;--text:#1e293b;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 6px rgba(0,0,0,.04)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+header{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:32px}
+.logo{font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.4px}
+.logo span{color:var(--primary)}
+nav{display:flex;align-items:center;gap:4px;flex:1}
+nav a{padding:6px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--text2);transition:all .15s}
+nav a:hover{color:var(--primary);background:var(--primary-dim)}
+.nav-cta{margin-left:auto;padding:8px 18px;background:var(--primary);color:#fff!important;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:background .15s}
+.nav-cta:hover{background:var(--primary-dark)!important}
+
+/* Ad slot */
+.ad-slot{width:100%;background:#f1f5f9;border:1px dashed #cbd5e1;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;letter-spacing:.5px;text-transform:uppercase;position:relative}
+.ad-top{height:90px;margin:0}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#1e40af,#2563eb 60%,#3b82f6);color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:2.4rem;font-weight:800;letter-spacing:-.5px;margin-bottom:12px}
+.hero p{font-size:1.05rem;opacity:.88;max-width:560px;margin:0 auto 28px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-white{padding:12px 28px;background:#fff;color:var(--primary);border-radius:var(--radius-sm);font-size:15px;font-weight:700;transition:all .15s}
+.btn-white:hover{background:#eff6ff}
+.btn-outline{padding:12px 28px;border:2px solid rgba(255,255,255,.6);color:#fff;border-radius:var(--radius-sm);font-size:15px;font-weight:600;transition:all .15s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+/* Main content */
+main{flex:1;max-width:1100px;margin:0 auto;padding:40px 20px 60px;width:100%}
+.section-title{font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:20px}
+
+/* Category tabs */
+.cat-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.cat-tab{padding:7px 18px;border-radius:20px;font-size:13px;font-weight:600;color:var(--text2);background:var(--bg2);border:1.5px solid var(--border);cursor:pointer;transition:all .15s}
+.cat-tab.active,.cat-tab:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* Tool grid */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:40px}
+.tool-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:8px;transition:all .2s;cursor:pointer}
+.tool-card:hover{border-color:var(--primary);box-shadow:0 4px 16px rgba(37,99,235,.1);transform:translateY(-2px)}
+.tool-icon{width:40px;height:40px;background:var(--primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.tool-icon svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tool-name{font-size:14px;font-weight:700;color:var(--text)}
+.tool-desc{font-size:12px;color:var(--text2);line-height:1.5}
+.tool-tag{align-self:flex-start;padding:3px 10px;background:var(--primary-light);color:var(--primary);border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+
+/* About */
+.about{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:36px;margin-bottom:40px;box-shadow:var(--shadow)}
+.about h2{font-size:1.2rem;font-weight:700;margin-bottom:12px}
+.about p{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:10px}
+.about p:last-child{margin-bottom:0}
+
+/* Footer */
+footer{background:var(--text);color:#94a3b8;padding:32px 20px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--primary)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:#94a3b8;font-size:13px;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:13px;width:100%}
+
+/* Back to top */
+#btt{position:fixed;bottom:28px;right:28px;width:42px;height:42px;background:var(--primary);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:none;z-index:999;box-shadow:0 2px 8px rgba(37,99,235,.35);transition:background .15s}
+#btt:hover{background:var(--primary-dark)}
+
+@media(max-width:640px){
+  .hero h1{font-size:1.8rem}
+  .header-inner{gap:12px}
+  nav a:not(.nav-cta){display:none}
+  .tool-grid{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body>
-<h1>Coming Soon - ContractFixPro</h1>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Contract<span>FixPro</span></a>
+    <nav>
+      <a href="/#tools">Tools</a>
+      <a href="/service-agreement.html">Service Agreement</a>
+      <a href="/nda-generator.html">NDA</a>
+      <a href="/about.html" class="nav-cta">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Ad: Top -->
+<div class="ad-slot ad-top"><span>Advertisement</span></div>
+
+<div class="hero">
+  <h1>Free Freelance Contract Generator</h1>
+  <p>Create professional contracts in minutes. No lawyers, no fees — just fill in the details and download.</p>
+  <div class="hero-btns">
+    <a href="#tools" class="btn-white">Browse Templates</a>
+    <a href="/freelance-contract.html" class="btn-outline">Start Free Contract</a>
+  </div>
+</div>
+
+<main>
+  <div id="tools">
+    <div class="section-title">20 Free Contract Templates</div>
+
+    <div class="cat-tabs">
+      <span class="cat-tab active" data-cat="all">All</span>
+      <span class="cat-tab" data-cat="freelance">Freelance</span>
+      <span class="cat-tab" data-cat="creative">Creative</span>
+      <span class="cat-tab" data-cat="business">Business</span>
+      <span class="cat-tab" data-cat="legal">Legal</span>
+    </div>
+
+    <div class="tool-grid" id="toolGrid">
+
+      <a href="/freelance-contract.html" class="tool-card" data-cat="freelance">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <div class="tool-name">Freelance Contract</div>
+        <div class="tool-desc">General freelance agreement for any project type.</div>
+        <span class="tool-tag">Freelance</span>
+      </a>
+
+      <a href="/web-design-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+        <div class="tool-name">Web Design Contract</div>
+        <div class="tool-desc">Covers website design, revisions, and delivery terms.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/graphic-design-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="tool-name">Graphic Design Contract</div>
+        <div class="tool-desc">For logos, branding, print, and digital design work.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/video-editing-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <div class="tool-name">Video Editing Contract</div>
+        <div class="tool-desc">Agreement for video editing and post-production projects.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/copywriting-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="tool-name">Copywriting Contract</div>
+        <div class="tool-desc">For content writing, blogs, ads, and copywriting services.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/photography-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="tool-name">Photography Contract</div>
+        <div class="tool-desc">Covers photoshoots, usage rights, and image delivery.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/videography-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.882v6.236a1 1 0 0 1-1.447.894L15 14"/><rect x="1" y="6" width="14" height="12" rx="2"/></svg></div>
+        <div class="tool-name">Videography Contract</div>
+        <div class="tool-desc">For event videography, filming, and video production.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/social-media-contract.html" class="tool-card" data-cat="business">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+        <div class="tool-name">Social Media Contract</div>
+        <div class="tool-desc">For social media management and content creation services.</div>
+        <span class="tool-tag">Business</span>
+      </a>
+
+      <a href="/influencer-contract.html" class="tool-card" data-cat="business">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="tool-name">Influencer Contract</div>
+        <div class="tool-desc">Brand collaboration and sponsored content agreement.</div>
+        <span class="tool-tag">Business</span>
+      </a>
+
+      <a href="/music-producer-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <div class="tool-name">Music Producer Contract</div>
+        <div class="tool-desc">For music production, beats, and recording agreements.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/independent-contractor.html" class="tool-card" data-cat="freelance">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="tool-name">Independent Contractor</div>
+        <div class="tool-desc">IRS-compliant independent contractor agreement.</div>
+        <span class="tool-tag">Freelance</span>
+      </a>
+
+      <a href="/consulting-agreement.html" class="tool-card" data-cat="freelance">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="tool-name">Consulting Agreement</div>
+        <div class="tool-desc">Professional consulting services contract template.</div>
+        <span class="tool-tag">Freelance</span>
+      </a>
+
+      <a href="/virtual-assistant-contract.html" class="tool-card" data-cat="freelance">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+        <div class="tool-name">Virtual Assistant Contract</div>
+        <div class="tool-desc">Remote administrative and VA services agreement.</div>
+        <span class="tool-tag">Freelance</span>
+      </a>
+
+      <a href="/logo-design-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="tool-name">Logo Design Contract</div>
+        <div class="tool-desc">For logo and brand identity design projects.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+      <a href="/brand-ambassador-contract.html" class="tool-card" data-cat="business">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="tool-name">Brand Ambassador Contract</div>
+        <div class="tool-desc">Long-term brand representation and promotion agreement.</div>
+        <span class="tool-tag">Business</span>
+      </a>
+
+      <a href="/nda-generator.html" class="tool-card" data-cat="legal">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="tool-name">NDA Generator</div>
+        <div class="tool-desc">Mutual and one-way non-disclosure agreement.</div>
+        <span class="tool-tag">Legal</span>
+      </a>
+
+      <a href="/service-agreement.html" class="tool-card" data-cat="freelance">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="tool-name">Service Agreement</div>
+        <div class="tool-desc">General service agreement for any professional service.</div>
+        <span class="tool-tag">Freelance</span>
+      </a>
+
+      <a href="/invoice-template.html" class="tool-card" data-cat="business">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="tool-name">Invoice Template</div>
+        <div class="tool-desc">Professional invoice generator for freelancers.</div>
+        <span class="tool-tag">Business</span>
+      </a>
+
+      <a href="/client-onboarding-contract.html" class="tool-card" data-cat="business">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+        <div class="tool-name">Client Onboarding Contract</div>
+        <div class="tool-desc">Welcome new clients with a complete onboarding agreement.</div>
+        <span class="tool-tag">Business</span>
+      </a>
+
+      <a href="/website-maintenance-contract.html" class="tool-card" data-cat="creative">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="tool-name">Website Maintenance Contract</div>
+        <div class="tool-desc">Ongoing website maintenance and support services.</div>
+        <span class="tool-tag">Creative</span>
+      </a>
+
+    </div><!-- end tool-grid -->
+  </div>
+
+  <div class="about">
+    <h2>About ContractFixPro</h2>
+    <p>ContractFixPro helps freelancers, designers, photographers, and small business owners create legally sound contracts in minutes — completely free. Our templates cover every major contract type, from simple freelance agreements to complex NDAs and consulting contracts.</p>
+    <p>Each contract is generated instantly in your browser based on your inputs. All contracts include standard legal sections: Scope of Work, Payment Terms, Intellectual Property, Confidentiality, Termination, and Governing Law clauses. No sign-up required, no watermarks, no hidden fees.</p>
+  </div>
+</main>
+
+<!-- Ad: Bottom -->
+<div style="max-width:1100px;margin:0 auto;padding:0 20px 32px">
+  <div class="ad-slot ad-top"><span>Advertisement</span></div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Contract<span>FixPro</span></div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 ContractFixPro. All rights reserved. Not legal advice.</p>
+  </div>
+</footer>
+
+<button id="btt" title="Back to top">&#8593;</button>
+
+<script>
+// Category filter
+document.querySelectorAll('.cat-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){
+    document.querySelectorAll('.cat-tab').forEach(function(t){t.classList.remove('active');});
+    tab.classList.add('active');
+    var cat=tab.dataset.cat;
+    document.querySelectorAll('.tool-card').forEach(function(card){
+      card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';
+    });
+  });
+});
+// Back to top
+var btt=document.getElementById('btt');
+window.addEventListener('scroll',function(){btt.style.display=window.scrollY>300?'block':'none';});
+btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
 </body>
 </html>

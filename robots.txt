@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://contractfixpro.com/sitemap.xml
