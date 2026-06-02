@@ -1,68 +1,34 @@
-# ContractFixPro - PayHip Automation Task
-# Execute all steps in order. Do not ask for confirmation, just do it.
+Do the following tasks on C:\Users\Administrator\contractfixpro\ without asking for confirmation:
 
-## STEP 1: Check project structure
-List all HTML files in C:\Users\Administrator\contractfixpro\ and identify the 20 contract tool pages. Extract the product name from each page's <h1> or <title> tag. Save the list to C:\Users\Administrator\contractfixpro\scripts\product-list.json in this format:
-[
-  { "name": "Product Name", "file": "filename.html", "price": 7 },
-  ...
-  { "name": "ContractFixPro Bundle - All 20 Contracts", "file": "bundle", "price": 29 }
-]
+1. DOWNLOAD MODAL - For all 20 contract HTML files (not index.html):
+Replace the Download PDF and Download Word buttons behavior.
+Instead of directly opening PayHip URL, clicking either button should show a modal overlay with:
+- Title: "Download Your Contract"
+- Two options side by side:
+  LEFT: "This Template Only" - price $7 - blue button "Buy Now $7" linking to the existing PayHip URL for that page
+  RIGHT: "All 20 Templates Bundle" - price $29, show "Save $111" badge - green button "Get Bundle $29" linking to https://payhip.com/bundle/products/rj4IU
+- Small text below: "Instant download • Editable Word + PDF • Commercial license"
+- X button to close modal
+- Modal background overlay (dark transparent)
+- Style consistent with existing site color #2563eb
 
-## STEP 2: Install dependencies
-Run these commands in C:\Users\Administrator\contractfixpro\:
-  npm init -y (if package.json doesn't exist)
-  npm install playwright
-  npx playwright install chromium
+2. BUNDLE BANNER - For all 20 contract HTML files:
+Add a banner just above the FAQ section (or above the ad placeholder if no FAQ):
+- Text: "💼 Need all 20 contracts? Get the complete bundle for $29 and save $111"
+- Link: https://payhip.com/bundle/products/rj4IU
+- Style: light blue background, full width, padding, same font as site
 
-## STEP 3: Create the Playwright script
-Create file C:\Users\Administrator\contractfixpro\scripts\payhip-create-products.js with the following logic:
+3. INDEX.HTML BUNDLE SECTION:
+Add a prominent bundle CTA section near the bottom of index.html, before the footer:
+- Heading: "Get All 20 Contract Templates"
+- Subtext: "One purchase, instant access to every template. Perfect for freelancers and agencies."
+- Price display: ~~$140~~ $29 today
+- Green "Get the Bundle →" button linking to https://payhip.com/bundle/products/rj4IU
+- List 4 bullet points: Editable Word & PDF / Commercial use license / Instant download / All future updates included
 
-- Login to PayHip:
-  URL: https://payhip.com/login
-  Email: xiaohuixie3@gmail.com
-  Password: xxh113324
+4. FIX BUNDLE DRAFT STATUS:
+The ContractFixPro Bundle product on PayHip is showing as DRAFT. Use Playwright to login to PayHip (xiaohuixie3@gmail.com / xxh113824) and publish it.
 
-- For each product in product-list.json:
-  1. Go to https://payhip.com/products/add
-  2. Select product type: "Digital Download"
-  3. Fill in product name
-  4. Set price in USD
-  5. For description, use: "Professional [product name] template. Ready to use, fully editable."
-  6. Upload a placeholder file (create a simple placeholder PDF or TXT if no real file exists)
-  7. Set to "Published"
-  8. Save and capture the product URL
-  9. Log the product name + URL to console and append to C:\Users\Administrator\contractfixpro\scripts\links.txt in format:
-     PRODUCT_NAME | PAYHIP_URL
+5. After all done, git add . && git commit -m "feat: improve purchase UX with modal, bundle banner and CTA" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
 
-- After all products created, create the bundle product last (price $29, list all 20 products in description)
-
-- Handle errors: if a step fails, log the error and continue to next product
-
-## STEP 4: Run the script
-Run: node C:\Users\Administrator\contractfixpro\scripts\payhip-create-products.js
-Wait for completion. links.txt should have 21 lines (20 products + 1 bundle).
-
-## STEP 5: Replace download buttons in HTML files
-After links.txt is generated, write a second script C:\Users\Administrator\contractfixpro\scripts\update-links.js that:
-- Reads links.txt
-- For each HTML file in contractfixpro, finds the download/buy button (look for <a> tags with class containing "download", "buy", "cta", or href="#")
-- Replaces the href with the matching PayHip product URL
-- Also updates the bundle purchase link on index.html or any page that has a bundle CTA
-- Saves all modified HTML files
-
-Run: node C:\Users\Administrator\contractfixpro\scripts\update-links.js
-
-## STEP 6: Verify
-Open 3 random HTML files and confirm the download buttons now point to payhip.com URLs.
-Report: how many files were updated, list any files that were NOT updated.
-
-## STEP 7: Git push
-Run:
-  cd C:\Users\Administrator\contractfixpro
-  git add .
-  git commit -m "feat: add PayHip purchase links to all contract pages"
-  git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
-
-## DONE
-Report final summary: products created, links replaced, push status.
+6. Delete this task from memory - do not save any task.txt file.

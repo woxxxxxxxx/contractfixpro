@@ -175,7 +175,12 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
   <!-- Ad 2 -->
   <div class="ad-slot ad-top" style="margin-bottom:28px"><span>Advertisement</span></div>
 
-  <div class="faq-section">
+    <!-- Bundle Banner -->
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:16px 20px;margin-bottom:24px;text-align:center;font-size:14px">
+    💼 <strong>Need all 20 contracts?</strong> Get the complete bundle for <strong>$29</strong> and save $111 &mdash; <a href="https://payhip.com/bundle/products/rj4IU" target="_blank" style="color:#2563eb;font-weight:700">Get the Bundle &rarr;</a>
+  </div>
+
+<div class="faq-section">
     <h2>Frequently Asked Questions</h2>
   <div class="faq-item">
     <div class="faq-q">What is an NDA?</div>
@@ -396,10 +401,10 @@ generateContract();
 
 // Download buttons
 document.getElementById("btnPdf").addEventListener("click",function(){
-  window.open("https://payhip.com/b/95Ldk","_blank");
+  showDlModal("https://payhip.com/b/95Ldk");
 });
 document.getElementById("btnDoc").addEventListener("click",function(){
-  window.open("https://payhip.com/b/95Ldk","_blank");
+  showDlModal("https://payhip.com/b/95Ldk");
 });
 
 // Back to top
@@ -407,6 +412,34 @@ var btt = document.getElementById("btt");
 window.addEventListener("scroll",function(){btt.style.display=window.scrollY>300?"block":"none";});
 btt.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
 
+</script>
+
+<!-- Download Modal -->
+<div id="dlModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:16px;padding:32px;max-width:520px;width:calc(100% - 40px);position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)">
+    <button onclick="closeDlModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#64748b;line-height:1">&times;</button>
+    <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:4px;color:#1e293b">Download Your Contract</h2>
+    <p style="font-size:13px;color:#64748b;margin-bottom:22px">Choose your option below</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="border:2px solid #e2e8f0;border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">This Template Only</div>
+        <div style="font-size:2rem;font-weight:800;color:#1e293b;margin-bottom:16px">$7</div>
+        <a id="dlSingleBtn" href="#" target="_blank" style="display:block;background:#2563eb;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">Buy Now $7</a>
+      </div>
+      <div style="border:2px solid #16a34a;border-radius:12px;padding:20px;text-align:center;background:#f0fdf4;position:relative">
+        <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">Save $111</div>
+        <div style="font-size:11px;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">All 20 Templates</div>
+        <div style="font-size:2rem;font-weight:800;color:#1e293b;margin-bottom:16px">$29</div>
+        <a href="https://payhip.com/bundle/products/rj4IU" target="_blank" style="display:block;background:#16a34a;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#15803d'" onmouseout="this.style.background='#16a34a'">Get Bundle $29</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:#94a3b8;margin-top:16px">Instant download &bull; Editable Word + PDF &bull; Commercial license</p>
+  </div>
+</div>
+<script>
+function showDlModal(url){document.getElementById('dlSingleBtn').href=url;var m=document.getElementById('dlModal');m.style.display='flex';document.body.style.overflow='hidden';}
+function closeDlModal(){document.getElementById('dlModal').style.display='none';document.body.style.overflow='';}
+document.getElementById('dlModal').addEventListener('click',function(e){if(e.target===this)closeDlModal();});
 </script>
 </body>
 </html>
