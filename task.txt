@@ -1,12 +1,26 @@
-Fix contract generator UX on all 20 tool pages in contractfixpro:
+Reorder the 20 tool cards on contractfixpro index.html by search volume (highest first):
 
-1. FIX DUPLICATE DIVIDER LINE in contract preview: there are two <hr> lines rendering in the preview (one full width, one short). Remove the duplicate, keep only one clean divider between the header and section 1.
+New order:
+1. Freelance Contract (freelance-contract.html)
+2. Photography Contract (photography-contract.html)
+3. Web Design Contract (web-design-contract.html)
+4. NDA Generator (nda-generator.html)
+5. Independent Contractor (independent-contractor.html)
+6. Service Agreement (service-agreement.html)
+7. Consulting Agreement (consulting-agreement.html)
+8. Social Media Contract (social-media-contract.html)
+9. Graphic Design Contract (graphic-design-contract.html)
+10. Copywriting Contract (copywriting-contract.html)
+11. Virtual Assistant Contract (virtual-assistant-contract.html)
+12. Logo Design Contract (logo-design-contract.html)
+13. Brand Ambassador Contract (brand-ambassador-contract.html)
+14. Videography Contract (videography-contract.html)
+15. Influencer Contract (influencer-contract.html)
+16. Music Producer Contract (music-producer-contract.html)
+17. Video Editing Contract (video-editing-contract.html)
+18. Client Onboarding Contract (client-onboarding-contract.html)
+19. Website Maintenance Contract (website-maintenance-contract.html)
+20. Invoice Template (invoice-template.html)
 
-2. IMPROVE Generate Contract button feedback:
-   - When user clicks "Generate Contract", show a brief loading state on the button (change text to "Generating..." for 800ms, then "✓ Contract Generated!")
-   - After generation, smoothly scroll the page down to the Contract Preview section (scrollIntoView with smooth behavior)
-   - Add a subtle green success banner above the preview: "✓ Your contract has been generated. Review below and download when ready." that fades in
-   - The preview box should have a brief highlight animation (border flashes blue once) when contract is generated
-
-After fix, push to GitHub:
-cd C:\Users\Administrator\contractfixpro && git add -A && git commit -m "fix: preview divider bug, improve generate button UX" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
+After reorder, push to GitHub:
+cd C:\Users\Administrator\contractfixpro && git add -A && git commit -m "reorder: tool cards by search volume" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
