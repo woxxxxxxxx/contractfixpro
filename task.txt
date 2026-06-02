@@ -1,26 +1,68 @@
-Reorder the 20 tool cards on contractfixpro index.html by search volume (highest first):
+# ContractFixPro - PayHip Automation Task
+# Execute all steps in order. Do not ask for confirmation, just do it.
 
-New order:
-1. Freelance Contract (freelance-contract.html)
-2. Photography Contract (photography-contract.html)
-3. Web Design Contract (web-design-contract.html)
-4. NDA Generator (nda-generator.html)
-5. Independent Contractor (independent-contractor.html)
-6. Service Agreement (service-agreement.html)
-7. Consulting Agreement (consulting-agreement.html)
-8. Social Media Contract (social-media-contract.html)
-9. Graphic Design Contract (graphic-design-contract.html)
-10. Copywriting Contract (copywriting-contract.html)
-11. Virtual Assistant Contract (virtual-assistant-contract.html)
-12. Logo Design Contract (logo-design-contract.html)
-13. Brand Ambassador Contract (brand-ambassador-contract.html)
-14. Videography Contract (videography-contract.html)
-15. Influencer Contract (influencer-contract.html)
-16. Music Producer Contract (music-producer-contract.html)
-17. Video Editing Contract (video-editing-contract.html)
-18. Client Onboarding Contract (client-onboarding-contract.html)
-19. Website Maintenance Contract (website-maintenance-contract.html)
-20. Invoice Template (invoice-template.html)
+## STEP 1: Check project structure
+List all HTML files in C:\Users\Administrator\contractfixpro\ and identify the 20 contract tool pages. Extract the product name from each page's <h1> or <title> tag. Save the list to C:\Users\Administrator\contractfixpro\scripts\product-list.json in this format:
+[
+  { "name": "Product Name", "file": "filename.html", "price": 7 },
+  ...
+  { "name": "ContractFixPro Bundle - All 20 Contracts", "file": "bundle", "price": 29 }
+]
 
-After reorder, push to GitHub:
-cd C:\Users\Administrator\contractfixpro && git add -A && git commit -m "reorder: tool cards by search volume" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
+## STEP 2: Install dependencies
+Run these commands in C:\Users\Administrator\contractfixpro\:
+  npm init -y (if package.json doesn't exist)
+  npm install playwright
+  npx playwright install chromium
+
+## STEP 3: Create the Playwright script
+Create file C:\Users\Administrator\contractfixpro\scripts\payhip-create-products.js with the following logic:
+
+- Login to PayHip:
+  URL: https://payhip.com/login
+  Email: xiaohuixie3@gmail.com
+  Password: xxh113324
+
+- For each product in product-list.json:
+  1. Go to https://payhip.com/products/add
+  2. Select product type: "Digital Download"
+  3. Fill in product name
+  4. Set price in USD
+  5. For description, use: "Professional [product name] template. Ready to use, fully editable."
+  6. Upload a placeholder file (create a simple placeholder PDF or TXT if no real file exists)
+  7. Set to "Published"
+  8. Save and capture the product URL
+  9. Log the product name + URL to console and append to C:\Users\Administrator\contractfixpro\scripts\links.txt in format:
+     PRODUCT_NAME | PAYHIP_URL
+
+- After all products created, create the bundle product last (price $29, list all 20 products in description)
+
+- Handle errors: if a step fails, log the error and continue to next product
+
+## STEP 4: Run the script
+Run: node C:\Users\Administrator\contractfixpro\scripts\payhip-create-products.js
+Wait for completion. links.txt should have 21 lines (20 products + 1 bundle).
+
+## STEP 5: Replace download buttons in HTML files
+After links.txt is generated, write a second script C:\Users\Administrator\contractfixpro\scripts\update-links.js that:
+- Reads links.txt
+- For each HTML file in contractfixpro, finds the download/buy button (look for <a> tags with class containing "download", "buy", "cta", or href="#")
+- Replaces the href with the matching PayHip product URL
+- Also updates the bundle purchase link on index.html or any page that has a bundle CTA
+- Saves all modified HTML files
+
+Run: node C:\Users\Administrator\contractfixpro\scripts\update-links.js
+
+## STEP 6: Verify
+Open 3 random HTML files and confirm the download buttons now point to payhip.com URLs.
+Report: how many files were updated, list any files that were NOT updated.
+
+## STEP 7: Git push
+Run:
+  cd C:\Users\Administrator\contractfixpro
+  git add .
+  git commit -m "feat: add PayHip purchase links to all contract pages"
+  git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
+
+## DONE
+Report final summary: products created, links replaced, push status.
