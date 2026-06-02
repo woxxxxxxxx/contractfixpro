@@ -40,6 +40,10 @@ main{max-width:860px;margin:0 auto;padding:24px 20px 60px;width:100%;flex:1}
 .field textarea{resize:vertical;min-height:80px}
 .btn-primary{margin-top:20px;padding:12px 28px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;font-family:inherit}
 .btn-primary:hover{background:var(--primary-dark)}
+.btn-primary:disabled{background:#93c5fd;cursor:not-allowed}
+@keyframes flashBorder{0%{border-color:var(--primary);box-shadow:0 0 0 4px rgba(37,99,235,.18)}100%{border-color:var(--border);box-shadow:var(--shadow)}}
+.preview-card.flash{animation:flashBorder 1.2s ease-out forwards}
+.success-banner{display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:var(--radius-sm);padding:12px 18px;margin-bottom:16px;color:#166534;font-size:14px;font-weight:600;opacity:0;transition:opacity .4s}
 .preview-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
 .preview-card h2{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--text)}
 #contractPreview{min-height:300px;font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.8;color:var(--text);white-space:pre-wrap;background:#fafafa;border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px;overflow-x:auto;max-width:100%;box-sizing:border-box;word-break:break-word}
@@ -147,10 +151,11 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
         <input type="text" id="governingLaw" placeholder="e.g. California, USA">
       </div>
     </div>
-    <button class="btn-primary" onclick="generateContract()">Generate Contract</button>
+    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Contract</button>
   </div>
 
-  <div class="preview-card">
+  <div class="success-banner" id="successBanner">&#10003; Your contract has been generated. Review below and download when ready.</div>
+  <div class="preview-card" id="previewCard">
     <h2>Contract Preview</h2>
     <div id="contractPreview">Fill in the form above to generate your contract...</div>
     <div class="download-row">
@@ -246,13 +251,13 @@ This Agreement is entered into as of ${today}, by and between:
 CLIENT: ${clientName}
 CONTRACTOR: ${contractorName}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 1. AGREEMENT
 
 This PROFESSIONAL INVOICE ("Agreement") is a legally binding contract between the Client and the Contractor, establishing the terms and conditions under which the Contractor will provide services to the Client.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 2. PARTIES
 
@@ -264,7 +269,7 @@ CONTRACTOR / SERVICE PROVIDER:
 Name: ${contractorName}
 (hereinafter referred to as "Contractor")
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 3. INVOICE DETAILS & SERVICES PROVIDED
 
@@ -274,7 +279,7 @@ ${projectDesc}
 
 The Contractor shall perform the services in a professional and workmanlike manner, consistent with industry standards. Any changes to the scope of work must be agreed upon in writing by both parties prior to commencement of additional work.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 4. PAYMENT TERMS
 
@@ -283,7 +288,7 @@ Payment Schedule: ${paymentTerms}
 
 Payment is due according to the schedule above. Late payments will incur a late fee of 1.5% per month on the outstanding balance. The Contractor reserves the right to suspend services for payments overdue by more than 14 days. The Client shall reimburse all reasonable expenses incurred by the Contractor in the performance of services, provided such expenses are pre-approved in writing.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 5. TIMELINE
 
@@ -292,49 +297,49 @@ Project End Date / Deadline: ${endDate}
 
 The Contractor shall make reasonable efforts to complete the services by the agreed deadline. Delays caused by the Client's failure to provide necessary materials, feedback, or approvals shall not be attributed to the Contractor. The Contractor shall notify the Client promptly of any anticipated delays.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 6. INTELLECTUAL PROPERTY
 
 Upon receipt of full payment from the Client, the Contractor assigns to the Client all rights, title, and interest in and to the deliverables created specifically for this project. The Contractor retains the right to: (a) use pre-existing materials, tools, and methodologies; (b) display the work in the Contractor's portfolio unless otherwise agreed in writing.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 7. CONFIDENTIALITY
 
 Both parties agree to keep confidential all proprietary or sensitive information disclosed during this engagement. The receiving party shall not disclose such information to third parties without prior written consent. This confidentiality obligation survives the termination of this Agreement for a period of three (3) years.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 8. INDEPENDENT CONTRACTOR
 
 The Contractor is an independent contractor and not an employee of the Client. The Contractor is responsible for all taxes arising from compensation received under this Agreement. Nothing in this Agreement shall be construed as creating an employer-employee, partnership, or joint venture relationship.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 9. TERMINATION
 
 Either party may terminate this Agreement with fourteen (14) days written notice. In the event of termination by the Client, the Client agrees to pay for all work completed through the date of termination. The Contractor may terminate immediately if the Client fails to make payment as required. Upon termination, each party shall return or destroy the other party's confidential materials.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 10. LIMITATION OF LIABILITY
 
 The Contractor's total liability under this Agreement shall not exceed the total fees paid by the Client in the three (3) months preceding the claim. Neither party shall be liable for indirect, incidental, or consequential damages.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 11. GOVERNING LAW
 
 This Agreement shall be governed by and construed in accordance with the laws of ${governingLaw}. Any disputes shall be resolved through binding arbitration in ${governingLaw} before resort to litigation.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 12. ENTIRE AGREEMENT
 
 This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 
 SIGNATURES
 
@@ -344,13 +349,38 @@ Name: ${clientName}
 CONTRACTOR: _______________________    Date: ____________
 Name: ${contractorName}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------
 Generated by ContractFixPro.com | For reference only — consult a legal professional for advice.`;
 
   document.getElementById("contractPreview").textContent = contract;
 }
 
-// Auto-generate on any input change
+// Wrapper for button click — adds UX feedback
+function generateContractFromBtn() {
+  var btn = document.getElementById("generateBtn");
+  btn.textContent = "Generating...";
+  btn.disabled = true;
+  setTimeout(function() {
+    generateContract();
+    btn.textContent = "\u2713 Contract Generated!";
+    btn.disabled = false;
+    // Scroll to preview
+    document.getElementById("previewCard").scrollIntoView({behavior:"smooth", block:"start"});
+    // Success banner fade-in
+    var banner = document.getElementById("successBanner");
+    banner.style.display = "block";
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() { banner.style.opacity = "1"; });
+    });
+    // Border flash
+    var card = document.getElementById("previewCard");
+    card.classList.remove("flash");
+    void card.offsetWidth;
+    card.classList.add("flash");
+  }, 800);
+}
+
+// Auto-generate on any input change (silent — no button feedback)
 document.querySelectorAll("input,select,textarea").forEach(function(el){
   el.addEventListener("input", generateContract);
 });
