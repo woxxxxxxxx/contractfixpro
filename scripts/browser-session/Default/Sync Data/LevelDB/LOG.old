@@ -1,3 +1,3 @@
-2026/06/03-04:21:10.398 dfbc Reusing MANIFEST C:\Users\Administrator\contractfixpro\scripts\browser-session\Default\Sync Data\LevelDB/MANIFEST-000001
-2026/06/03-04:21:10.407 dfbc Recovering log #3
-2026/06/03-04:21:10.408 dfbc Reusing old log C:\Users\Administrator\contractfixpro\scripts\browser-session\Default\Sync Data\LevelDB/000003.log 
+2026/06/03-14:26:53.689 10d70 Reusing MANIFEST C:\Users\Administrator\contractfixpro\scripts\browser-session\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/06/03-14:26:53.698 10d70 Recovering log #3
+2026/06/03-14:26:53.698 10d70 Reusing old log C:\Users\Administrator\contractfixpro\scripts\browser-session\Default\Sync Data\LevelDB/000003.log 

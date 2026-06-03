@@ -1,34 +1,12 @@
-Do the following tasks on C:\Users\Administrator\contractfixpro\ without asking for confirmation:
+Use Playwright to fix the PayHip bundle. Login: xiaohuixie3@gmail.com / xxh113824
 
-1. DOWNLOAD MODAL - For all 20 contract HTML files (not index.html):
-Replace the Download PDF and Download Word buttons behavior.
-Instead of directly opening PayHip URL, clicking either button should show a modal overlay with:
-- Title: "Download Your Contract"
-- Two options side by side:
-  LEFT: "This Template Only" - price $7 - blue button "Buy Now $7" linking to the existing PayHip URL for that page
-  RIGHT: "All 20 Templates Bundle" - price $29, show "Save $111" badge - green button "Get Bundle $29" linking to https://payhip.com/bundle/products/rj4IU
-- Small text below: "Instant download • Editable Word + PDF • Commercial license"
-- X button to close modal
-- Modal background overlay (dark transparent)
-- Style consistent with existing site color #2563eb
+1. Go to https://payhip.com/b/rj4IU/manage (or find the bundle "ContractFixPro Bundle - All 20 Contracts" and click Manage)
 
-2. BUNDLE BANNER - For all 20 contract HTML files:
-Add a banner just above the FAQ section (or above the ad placeholder if no FAQ):
-- Text: "💼 Need all 20 contracts? Get the complete bundle for $29 and save $111"
-- Link: https://payhip.com/bundle/products/rj4IU
-- Style: light blue background, full width, padding, same font as site
+2. Click "Add Product", add all 20 contract products one by one:
+Freelance Contract Generator, Photography Contract Generator, Web Design Contract Generator, NDA Generator, Independent Contractor Agreement Generator, Service Agreement Generator, Consulting Agreement Generator, Social Media Management Contract Generator, Graphic Design Contract Generator, Copywriting Contract Generator, Virtual Assistant Contract Generator, Logo Design Contract Generator, Brand Ambassador Contract Generator, Videography Contract Generator, Influencer Brand Deal Contract Generator, Music Producer Contract Generator, Video Editing Contract Generator, Client Onboarding Contract Generator, Website Maintenance Contract Generator, Invoice Template Generator
 
-3. INDEX.HTML BUNDLE SECTION:
-Add a prominent bundle CTA section near the bottom of index.html, before the footer:
-- Heading: "Get All 20 Contract Templates"
-- Subtext: "One purchase, instant access to every template. Perfect for freelancers and agencies."
-- Price display: ~~$140~~ $29 today
-- Green "Get the Bundle →" button linking to https://payhip.com/bundle/products/rj4IU
-- List 4 bullet points: Editable Word & PDF / Commercial use license / Instant download / All future updates included
+3. After adding all products, click "Pricing" tab, set price to $29 USD
 
-4. FIX BUNDLE DRAFT STATUS:
-The ContractFixPro Bundle product on PayHip is showing as DRAFT. Use Playwright to login to PayHip (xiaohuixie3@gmail.com / xxh113824) and publish it.
+4. Click "Publish" to make the bundle live
 
-5. After all done, git add . && git commit -m "feat: improve purchase UX with modal, bundle banner and CTA" && git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
-
-6. Delete this task from memory - do not save any task.txt file.
+5. Report: how many products added, bundle URL, published status
