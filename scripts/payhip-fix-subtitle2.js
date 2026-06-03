@@ -181,7 +181,7 @@ async function waitForSections(page, minCount = 3, timeout = 20000) {
     await sleep(3000);
 
     // Verify
-    await page.goto('https://payhip.com/b/rj4IU', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await sleep(2000);
     const publicText = await page.evaluate(() => document.body.innerText.slice(0, 500));
     log('Public page:\n' + publicText);

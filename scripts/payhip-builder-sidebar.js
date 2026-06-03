@@ -273,7 +273,7 @@ async function clearAndType(page, selector, newValue) {
 
     // ── STEP 6: Verify ───────────────────────────────────────────────────────
     log('\n=== Step 6: Verify public page ===');
-    await page.goto('https://payhip.com/b/rj4IU', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await sleep(2000);
     const publicText = await page.evaluate(() => document.body.innerText.slice(0, 600));
     log('Public page text: ' + publicText);

@@ -77,7 +77,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
     await page.screenshot({ path: path.join(__dirname, 'bundle-url-products.png') });
 
     // Navigate to the bundle manage page to find the public URL
-    await page.goto('https://payhip.com/b/rj4IU/manage', {
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL/manage', {
       waitUntil: 'domcontentloaded', timeout: 30000
     });
     await sleep(2000);
@@ -93,7 +93,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
     // Also try the bundle public URL patterns
     // PayHip bundles usually have a public URL like payhip.com/b/ID or payhip.com/bundle/ID
     const publicUrlCandidates = [
-      `https://payhip.com/b/rj4IU`,
+      `https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL`,
       `https://payhip.com/bundle/rj4IU`,
     ];
 

@@ -195,7 +195,7 @@ const DESCRIPTION_TEXT = 'Get all 20 professional contract templates in one purc
     log('\n=============================');
     log('BUILDER INVESTIGATION COMPLETE');
     log('The PayHip page builder is a visual WYSIWYG editor.');
-    log('Preview iframe: https://payhip.com/b/rj4IU?builder_mode=1');
+    log('Preview iframe: https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL?builder_mode=1');
     log('Current hero text in preview: "Bundle Title"');
     log('Required: click element in iframe → opens edit sidebar');
     log('Need second script to interact with builder sidebar');

@@ -143,7 +143,7 @@ const DESCRIPTION = 'Get all 20 professional contract templates in one purchase.
 
     // ── Check the /b/rj4IU page source for editable fields ───────────────────
     log('\n=== Public page /b/rj4IU ===');
-    await page.goto('https://payhip.com/b/rj4IU', { waitUntil: 'networkidle', timeout: 20000 });
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL', { waitUntil: 'networkidle', timeout: 20000 });
     await sleep(2000);
     await page.screenshot({ path: path.join(SCRIPTS_DIR, 'bs2-public.png') });
     const publicText = await page.evaluate(() => document.body.innerText.slice(0, 800));

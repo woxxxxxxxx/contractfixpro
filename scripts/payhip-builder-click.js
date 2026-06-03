@@ -251,7 +251,7 @@ async function fillTextInSidebar(page, newText, description) {
 
     // Verify public page updated
     log('\n=== Verify public page ===');
-    await page.goto('https://payhip.com/b/rj4IU', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await sleep(2000);
     const publicText = await page.evaluate(() => document.body.innerText.slice(0, 800));
     log('Public page after update: ' + publicText);

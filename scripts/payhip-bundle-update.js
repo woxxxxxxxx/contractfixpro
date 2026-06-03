@@ -149,7 +149,7 @@ const HERO_SUBTITLE = 'One purchase. Instant access. Professional contracts for 
 
     // ── Try navigating to the actual public page to find if there's an edit mode ─
     log('\n=== 3. Check public page for edit mode ===');
-    await page.goto('https://payhip.com/b/rj4IU', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.goto('https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await sleep(3000);
     await page.screenshot({ path: path.join(SCRIPTS_DIR, 'update-public.png') });
 
