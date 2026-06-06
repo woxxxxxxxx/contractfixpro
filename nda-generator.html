@@ -272,107 +272,101 @@ function generateContract() {
 
   var contract = `NON-DISCLOSURE AGREEMENT (NDA)
 
-This Agreement is entered into as of ${today}, by and between:
+This Non-Disclosure Agreement ("Agreement") is entered into as of ${today}, by and between:
 
-CLIENT: ${clientName}
-CONTRACTOR: ${contractorName}
-
-----------------------------------------------------------
-
-1. AGREEMENT
-
-This NON-DISCLOSURE AGREEMENT (NDA) ("Agreement") is a legally binding contract between the Client and the Contractor, establishing the terms and conditions under which the Contractor will provide services to the Client.
+DISCLOSING PARTY: ${clientName}
+RECEIVING PARTY:  ${contractorName}
+NDA Type: ${nda_type}
 
 ----------------------------------------------------------
 
-2. PARTIES
+1. DEFINITION OF CONFIDENTIAL INFORMATION
 
-CLIENT:
-Name: ${clientName}
-(hereinafter referred to as "Client")
+"Confidential Information" includes any non-public information disclosed by the Disclosing Party to the Receiving Party, including but not limited to:
 
-CONTRACTOR / SERVICE PROVIDER:
-Name: ${contractorName}
-(hereinafter referred to as "Contractor")
+${confidential_info}
+
+Additional categories: trade secrets, business plans, financial data, client lists, technical specifications, software code, proprietary processes, and any information designated as confidential.
 
 ----------------------------------------------------------
 
-3. CONFIDENTIAL INFORMATION & DISCLOSURE SCOPE
+2. PURPOSE OF DISCLOSURE
 
-The Contractor agrees to provide the following services to the Client:
+The Confidential Information is disclosed solely for the following purpose:
 
 ${projectDesc}
 
-The Contractor shall perform the services in a professional and workmanlike manner, consistent with industry standards. Any changes to the scope of work must be agreed upon in writing by both parties prior to commencement of additional work.
+The Receiving Party shall not use the Confidential Information for any purpose other than this Permitted Purpose.
 
 ----------------------------------------------------------
 
-4. PAYMENT TERMS
+3. OBLIGATIONS OF THE RECEIVING PARTY
 
-Total Project Fee: $$${paymentAmount}
-Payment Schedule: ${paymentTerms}
-
-Payment is due according to the schedule above. Late payments will incur a late fee of 1.5% per month on the outstanding balance. The Contractor reserves the right to suspend services for payments overdue by more than 14 days. The Client shall reimburse all reasonable expenses incurred by the Contractor in the performance of services, provided such expenses are pre-approved in writing.
-
-----------------------------------------------------------
-
-5. TIMELINE
-
-Project Start Date: ${startDate}
-Project End Date / Deadline: ${endDate}
-
-The Contractor shall make reasonable efforts to complete the services by the agreed deadline. Delays caused by the Client's failure to provide necessary materials, feedback, or approvals shall not be attributed to the Contractor. The Contractor shall notify the Client promptly of any anticipated delays.
+The Receiving Party agrees to:
+(a) Hold all Confidential Information in strict confidence, using at least the same degree of care as for its own confidential information;
+(b) Not disclose any Confidential Information to any third party without prior written consent, except to employees or advisors with a need to know who are bound by equivalent confidentiality obligations;
+(c) Not use the Confidential Information for any purpose other than the Permitted Purpose;
+(d) Promptly notify the Disclosing Party upon discovering any actual or suspected breach of this Agreement.
 
 ----------------------------------------------------------
 
-6. INTELLECTUAL PROPERTY
+4. EXCLUSIONS FROM CONFIDENTIALITY
 
-Upon receipt of full payment from the Client, the Contractor assigns to the Client all rights, title, and interest in and to the deliverables created specifically for this project. The Contractor retains the right to: (a) use pre-existing materials, tools, and methodologies; (b) display the work in the Contractor's portfolio unless otherwise agreed in writing.
-
-----------------------------------------------------------
-
-7. CONFIDENTIALITY
-
-Both parties agree to keep confidential all proprietary or sensitive information disclosed during this engagement. The receiving party shall not disclose such information to third parties without prior written consent. This confidentiality obligation survives the termination of this Agreement for a period of three (3) years.
+This Agreement does not apply to information that:
+(a) Is or becomes publicly available through no fault of the Receiving Party;
+(b) Was rightfully known to the Receiving Party prior to disclosure;
+(c) Is independently developed without reference to the Confidential Information;
+(d) Is required to be disclosed by law or court order, provided prompt written notice is given to allow the Disclosing Party to seek a protective order.
 
 ----------------------------------------------------------
 
-8. INDEPENDENT CONTRACTOR
+5. TERM AND DURATION
 
-The Contractor is an independent contractor and not an employee of the Client. The Contractor is responsible for all taxes arising from compensation received under this Agreement. Nothing in this Agreement shall be construed as creating an employer-employee, partnership, or joint venture relationship.
+Effective Date: ${startDate}
+Expiry Date: ${endDate}
 
-----------------------------------------------------------
-
-9. TERMINATION
-
-Either party may terminate this Agreement with fourteen (14) days written notice. In the event of termination by the Client, the Client agrees to pay for all work completed through the date of termination. The Contractor may terminate immediately if the Client fails to make payment as required. Upon termination, each party shall return or destroy the other party's confidential materials.
+Confidentiality obligations shall survive for three (3) years after the termination of this Agreement.
 
 ----------------------------------------------------------
 
-10. LIMITATION OF LIABILITY
+6. RETURN OR DESTRUCTION OF INFORMATION
 
-The Contractor's total liability under this Agreement shall not exceed the total fees paid by the Client in the three (3) months preceding the claim. Neither party shall be liable for indirect, incidental, or consequential damages.
-
-----------------------------------------------------------
-
-11. GOVERNING LAW
-
-This Agreement shall be governed by and construed in accordance with the laws of ${governingLaw}. Any disputes shall be resolved through binding arbitration in ${governingLaw} before resort to litigation.
+Upon request or termination, the Receiving Party shall promptly return or certifiably destroy all Confidential Information and copies thereof.
 
 ----------------------------------------------------------
 
-12. ENTIRE AGREEMENT
+7. NO LICENCE OR OWNERSHIP TRANSFER
 
-This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
+Nothing herein grants any right, title, or licence in or to the Confidential Information. All Confidential Information remains the exclusive property of the Disclosing Party.
+
+----------------------------------------------------------
+
+8. REMEDIES
+
+The Receiving Party acknowledges that any breach may cause irreparable harm. The Disclosing Party shall be entitled to seek equitable relief, including injunction, in addition to all remedies at law.
+
+----------------------------------------------------------
+
+9. GOVERNING LAW
+
+This Agreement shall be governed by the laws of ${governingLaw}. Disputes shall be resolved through binding arbitration in ${governingLaw}.
+
+----------------------------------------------------------
+
+10. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement regarding its subject matter and may only be amended in writing signed by both parties.
 
 ----------------------------------------------------------
 
 SIGNATURES
 
-CLIENT: ___________________________    Date: ____________
+IN WITNESS WHEREOF, the parties have executed this Non-Disclosure Agreement as of the date first written above.
+
+DISCLOSING PARTY: ___________________________  Date: ____________
 Name: ${clientName}
 
-CONTRACTOR: _______________________    Date: ____________
+RECEIVING PARTY:  ___________________________  Date: ____________
 Name: ${contractorName}
 
 ----------------------------------------------------------
