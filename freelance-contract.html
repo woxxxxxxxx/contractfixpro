@@ -235,6 +235,52 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 </div>
   </div>
 
+<!-- AFFILIATE_SECTION_START -->
+<style>
+.affiliate-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
+.affiliate-section h2{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--text)}
+.affiliate-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.affiliate-card{display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);transition:all .15s;color:var(--text);text-decoration:none}
+.affiliate-card:hover{border-color:var(--primary);background:var(--primary-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.affiliate-logo{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
+.affiliate-content{flex:1;min-width:0}
+.affiliate-name{font-size:14px;font-weight:700;color:var(--text)}
+.affiliate-desc{font-size:12px;color:var(--text3);margin-top:2px;line-height:1.4}
+.affiliate-cta{font-size:12px;font-weight:700;color:var(--primary);white-space:nowrap;padding:6px 12px;border:1.5px solid var(--primary);border-radius:var(--radius-sm);transition:all .15s;flex-shrink:0}
+.affiliate-card:hover .affiliate-cta{background:var(--primary);color:#fff}
+</style>
+<section class="affiliate-section">
+  <h2>Recommended Tools for Freelancers</h2>
+  <div class="affiliate-grid">
+    <!-- AFFILIATE_LINK: replace with actual affiliate URL -->
+    <a href="https://pandadoc.com" rel="nofollow" target="_blank" class="affiliate-card">
+      <div class="affiliate-logo">PD</div>
+      <div class="affiliate-content">
+        <div class="affiliate-name">PandaDoc</div>
+        <div class="affiliate-desc">Create professional proposals &amp; contracts</div>
+      </div>
+      <span class="affiliate-cta">Try Free &#8594;</span>
+    </a>
+<!-- AFFILIATE_LINK: replace with actual affiliate URL -->
+    <a href="https://webflow.com" rel="nofollow" target="_blank" class="affiliate-card">
+      <div class="affiliate-logo">WF</div>
+      <div class="affiliate-content">
+        <div class="affiliate-name">Webflow</div>
+        <div class="affiliate-desc">Build your freelance portfolio website</div>
+      </div>
+      <span class="affiliate-cta">Try Free &#8594;</span>
+    </a>
+<!-- AFFILIATE_LINK: replace with actual affiliate URL -->
+    <a href="https://monday.com" rel="nofollow" target="_blank" class="affiliate-card">
+      <div class="affiliate-logo">Mo</div>
+      <div class="affiliate-content">
+        <div class="affiliate-name">Monday.com</div>
+        <div class="affiliate-desc">Manage your freelance projects</div>
+      </div>
+      <span class="affiliate-cta">Try Free &#8594;</span>
+    </a>
+  </div>
+</section>
 </main>
 
 <footer>
