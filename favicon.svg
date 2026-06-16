@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2563eb"/>
-  <text x="16" y="23" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">C</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs><linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e40af"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+  <rect width="64" height="64" rx="12" fill="#eff6ff"/>
+  <rect x="6" y="6" width="24" height="24" rx="3" fill="#bfdbfe"/>
+  <line x1="11" y1="14" x2="25" y2="14" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <line x1="11" y1="19" x2="25" y2="19" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <line x1="11" y1="24" x2="20" y2="24" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <rect x="34" y="6" width="24" height="24" rx="3" fill="#93c5fd"/>
+  <line x1="39" y1="14" x2="53" y2="14" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <line x1="39" y1="19" x2="53" y2="19" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <rect x="6" y="34" width="24" height="24" rx="3" fill="#93c5fd"/>
+  <line x1="11" y1="42" x2="25" y2="42" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <line x1="11" y1="47" x2="20" y2="47" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <rect x="34" y="34" width="24" height="24" rx="3" fill="url(#cg)"/>
+  <polyline points="40,47 45,52 56,38" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
