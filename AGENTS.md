@@ -17,6 +17,7 @@
 
 ## 关键修复历史
 - [2026-06-24] LawDepot partner CTA 样式修复：6 个接入页统一使用横向 LawDepot 标识，放大 logo 容器；按钮文字强制白色，避免被文章链接样式覆盖；保留 `rel="sponsored noopener nofollow"`。
+- [2026-06-24] LawDepot logo 二次替换：按用户提供截图抠出透明 PNG，6 个 CTA 页引用 `/assets/img/lawdepot-logo.png`。
 
 ## 待办
 - [ ] 审计全站
