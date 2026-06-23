@@ -1,0 +1,25 @@
+/* ═══ Featured Partner CTA — Reusable affiliate placement template ═══ */
+.partner-cta{position:relative;display:grid;grid-template-columns:140px 1fr;gap:1.25rem;max-width:960px;margin:1.5rem auto;background:linear-gradient(135deg,#ffffff 0%,#eff6ff 100%);border:1px solid #bfdbfe;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 4px 16px rgba(37,99,235,.08),0 1px 3px rgba(0,0,0,.04);overflow:hidden;transition:transform .2s,box-shadow .2s;align-items:center}
+.partner-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,99,235,.15)}
+.partner-cta::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#60a5fa 0%,#1e40af 100%)}
+.partner-cta-brand{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.875rem .5rem;background:#fff;border-radius:10px;border:1px solid #bfdbfe}
+.partner-cta-logo{width:80px;height:56px;display:flex;align-items:center;justify-content:center;margin-bottom:.5rem}
+.partner-cta-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.partner-cta-logo.letter{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);color:#fff;font-size:1.75rem;font-weight:800;letter-spacing:-.02em;box-shadow:0 4px 10px rgba(30,64,175,.3)}
+.partner-cta-brandname{font-size:.95rem;font-weight:700;color:#1e293b;margin:0;line-height:1.2}
+.partner-cta-category{font-size:.7rem;color:#1e40af;margin:.2rem 0 .4rem;letter-spacing:.02em}
+.partner-cta-stars{color:#f59e0b;font-size:.85rem;letter-spacing:.05em}
+.partner-cta-content{display:flex;flex-direction:column;justify-content:center}
+.partner-cta-tag{display:inline-flex;align-items:center;gap:.25rem;background:#dbeafe;color:#1e3a8a;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.22rem .55rem;border-radius:999px;margin-bottom:.5rem;width:fit-content;border:1px solid #93c5fd}
+.partner-cta-headline{font-size:1.15rem;font-weight:800;color:#0f172a;margin:0 0 .4rem;line-height:1.3}
+.partner-cta-desc{font-size:.88rem;color:#475569;line-height:1.55;margin:0 0 .75rem}
+.partner-cta-desc strong{color:#1e3a8a;font-weight:700}
+.partner-cta-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.85rem}
+.partner-cta-badge{display:inline-flex;align-items:center;gap:.25rem;background:#fff;border:1px solid #e2e8f0;color:#334155;font-size:.72rem;font-weight:600;padding:.28rem .55rem;border-radius:6px}
+.partner-cta-badge .ic{color:#1e40af;font-weight:700}
+.partner-cta-btn{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,#2563eb 0%,#1e40af 100%);color:#fff;font-weight:700;font-size:.9rem;padding:.65rem 1.25rem;border-radius:8px;text-decoration:none;width:fit-content;box-shadow:0 3px 10px rgba(30,64,175,.25);transition:all .2s}
+.partner-cta-btn::after{content:'→';font-size:1.05rem;transition:transform .2s}
+.partner-cta-btn:hover{background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);box-shadow:0 6px 16px rgba(30,64,175,.35);color:#fff;transform:translateY(-1px)}
+.partner-cta-btn:hover::after{transform:translateX(4px)}
+.partner-cta-sublabel{font-size:.7rem;color:#94a3b8;margin-top:.45rem}
+@media (max-width:640px){.partner-cta{grid-template-columns:1fr;gap:.875rem;padding:1rem;margin:1rem}.partner-cta-brand{padding:.75rem;flex-direction:row;justify-content:flex-start;gap:.75rem;text-align:left}.partner-cta-logo{margin-bottom:0}.partner-cta-logo.letter{width:46px;height:46px;font-size:1.4rem}.partner-cta-headline{font-size:1.05rem}}
