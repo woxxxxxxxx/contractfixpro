@@ -16,7 +16,7 @@
 - PayHip 自动化脚本：contractfixpro/scripts/payhip-*.js（Playwright + browser-session 复用登录态）
 
 ## 关键修复历史
-- （暂无）
+- [2026-06-24] LawDepot partner CTA 样式修复：6 个接入页统一使用横向 LawDepot 标识，放大 logo 容器；按钮文字强制白色，避免被文章链接样式覆盖；保留 `rel="sponsored noopener nofollow"`。
 
 ## 待办
 - [ ] 审计全站
