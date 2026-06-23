@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <defs>
+    <linearGradient id="ldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon: rounded square with document + L -->
+  <rect x="6" y="10" width="60" height="60" rx="12" fill="url(#ldBg)"/>
+  <!-- Document corner fold -->
+  <path d="M 24 22 L 44 22 L 50 28 L 50 56 L 24 56 Z" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 44 22 L 44 28 L 50 28" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- L letter overlay -->
+  <text x="32" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">L</text>
+  <!-- Wordmark -->
+  <text x="78" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#1e3a8a" letter-spacing="-0.5">Law<tspan fill="#2563eb">Depot</tspan></text>
+</svg>
