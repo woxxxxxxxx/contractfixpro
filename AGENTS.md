@@ -28,3 +28,9 @@
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
 - ??????????/?????????
+
+
+## 2026-07-01 search-click acceleration
+- Added 4 search-intent guide hub pages based on recent Search Console exposure.
+- Updated title/meta descriptions for high-impression, low-CTR pages and added a homepage entry block for the new guides.
+- Regenerated sitemap.xml with lastmod=2026-07-01. Goal: improve long-tail relevance, internal link strength, and search-result click clarity.
