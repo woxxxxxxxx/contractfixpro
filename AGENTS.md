@@ -34,3 +34,8 @@
 - Added 4 search-intent guide hub pages based on recent Search Console exposure.
 - Updated title/meta descriptions for high-impression, low-CTR pages and added a homepage entry block for the new guides.
 - Regenerated sitemap.xml with lastmod=2026-07-01. Goal: improve long-tail relevance, internal link strength, and search-result click clarity.
+
+## 2026-07-11 AdSense low-value remediation
+- AdSense rejected the site for low-value content. Audit found 16 batch articles around 200-230 words with near-identical structure, thin search guides, an affiliate-first homepage, and unsupported lawyer-reviewed/legally sound positioning.
+- Eight core articles were rebuilt to 626-657 words with concrete scenarios, verification cards, decision records, disclaimers, and IRS/Copyright Office/FTC sources. Nine thin articles and four thin guides are noindex, removed from search inventory, and contain no AdSense loader.
+- Homepage LawDepot feature block was removed from above the tools, commercial/legal claims were softened, editorial-policy.html was added, and the sitemap now contains 33 focused URLs.
