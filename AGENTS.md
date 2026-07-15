@@ -39,3 +39,8 @@
 - AdSense rejected the site for low-value content. Audit found 16 batch articles around 200-230 words with near-identical structure, thin search guides, an affiliate-first homepage, and unsupported lawyer-reviewed/legally sound positioning.
 - Eight core articles were rebuilt to 626-657 words with concrete scenarios, verification cards, decision records, disclaimers, and IRS/Copyright Office/FTC sources. Nine thin articles and four thin guides are noindex, removed from search inventory, and contain no AdSense loader.
 - Homepage LawDepot feature block was removed from above the tools, commercial/legal claims were softened, editorial-policy.html was added, and the sitemap now contains 33 focused URLs.
+
+## 2026-07-15 affiliate measurement
+- Added `/affiliate-tracking.js` to all 49 HTML pages and deployed through GitHub Pages in commit `910b92b`.
+- The tracker emits structured GA4 `affiliate_click` events for sponsored links; the shared daily report now reports them by site.
+- Live tracker/homepage checks and the ContractFixPro post-deploy check passed.
