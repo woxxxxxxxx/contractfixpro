@@ -12,9 +12,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Virtual Assistant Contract Template and Guide | ContractFixPro</title>
-<meta name="description" content="Create a virtual assistant contract with scope, payment, confidentiality, tools access, response time, and termination terms.">
+<title>Virtual Assistant Contract Template: Scope, Access & Exit (2026)</title>
+<meta name="description" content="Build a virtual assistant contract planning draft with tasks, hours, payment, system access, confidentiality, ownership, termination, and dispute inputs.">
 <link rel="canonical" href="https://contractfixpro.com/virtual-assistant-contract.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--primary:#2563eb;--primary-dark:#1d4ed8;--primary-light:#eff6ff;--primary-dim:rgba(37,99,235,.08);--bg:#f8fafc;--bg2:#fff;--text:#1e293b;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 6px rgba(0,0,0,.04)}
@@ -89,12 +90,27 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
   .related-grid{grid-template-columns:1fr}
 }
 .seo-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}.seo-section h2{font-size:1rem;font-weight:700;margin-bottom:12px}.seo-section p{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:10px}.seo-section p:last-child{margin-bottom:0}
+.decision-table{width:100%;border-collapse:collapse;margin:16px 0 6px;font-size:13px}.decision-table th,.decision-table td{padding:11px 12px;border:1px solid var(--border);text-align:left;vertical-align:top}.decision-table th{background:#f1f5f9}.decision-table td:first-child{font-weight:700}.review-note{background:#fff7ed;border:1px solid #fed7aa;border-radius:var(--radius-sm);padding:14px 16px;color:#9a3412;font-size:13px;margin:16px 0}
+@media(max-width:600px){.decision-table{display:block;overflow-x:auto;white-space:nowrap}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Virtual Assistant Contract Planning Draft",
+  "url": "https://contractfixpro.com/virtual-assistant-contract.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "dateModified": "2026-07-18",
+  "description": "An editable planning tool for documenting virtual assistant scope, capacity, access, payment, ownership, confidentiality, termination, and dispute inputs.",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1638874323475457"
      crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/assets/css/tool-modules.css">
-<meta property="og:title" content="Virtual Assistant Contract Template and Guide | ContractFixPro">
-<meta property="og:description" content="Create a virtual assistant contract with scope, payment, confidentiality, tools access, response time, and termination terms.">
+<meta property="og:title" content="Virtual Assistant Contract Template: Scope, Access & Exit">
+<meta property="og:description" content="Plan VA tasks, hours, payment, access controls, ownership, confidentiality, termination, and disputes before signing.">
 <meta property="og:url" content="https://contractfixpro.com/virtual-assistant-contract.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -117,8 +133,8 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 <main id="main-content">
 
   <div class="tool-hero">
-    <h1>Virtual Assistant Contract Generator</h1>
-    <p>Generate a virtual assistant contract for remote administrative, scheduling, customer support, and business support services.</p>
+    <h1>Virtual Assistant Contract Template and Planning Draft</h1>
+    <p>Document the work, capacity, access controls, payment triggers, ownership choices, and exit process before sending a draft for review.</p>
   </div>
 
   <!-- Ad 1 -->
@@ -145,7 +161,15 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
       </div>
       <div class="field">
         <label for="hours_per_week">Hours Per Week</label>
-        <input type="text" id="hours_per_week" placeholder="e.g. 20">
+        <input type="text" id="hours_per_week" placeholder="e.g. Up to 20 hours; approval required above 20">
+      </div>
+      <div class="field">
+        <label for="serviceModel">Service and Billing Model</label>
+        <select id="serviceModel"><option>Hourly with a weekly cap</option><option>Monthly retainer for reserved capacity</option><option>Fixed project or deliverable</option></select>
+      </div>
+      <div class="field">
+        <label for="responseWindow">Availability / Response Window</label>
+        <input type="text" id="responseWindow" placeholder="e.g. Mon-Fri, 9am-1pm ET; reply within 1 business day">
       </div>
       <div class="field">
         <label for="paymentAmount">Payment Amount ($)</label>
@@ -153,7 +177,31 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
       </div>
       <div class="field">
         <label for="paymentTerms">Payment Terms</label>
-        <input type="text" id="paymentTerms" placeholder="e.g. 50% upfront, 50% on delivery">
+        <input type="text" id="paymentTerms" placeholder="e.g. Invoice monthly; due 14 days after receipt">
+      </div>
+      <div class="field full">
+        <label for="accessRules">Systems, Data and Access Rules</label>
+        <textarea id="accessRules" placeholder="List approved systems, least-privilege access, password manager, device rules, prohibited downloads, and access removal owner"></textarea>
+      </div>
+      <div class="field">
+        <label for="expensePolicy">Expense Approval</label>
+        <input type="text" id="expensePolicy" placeholder="e.g. Written approval required before any expense">
+      </div>
+      <div class="field">
+        <label for="ipChoice">Deliverable Ownership</label>
+        <select id="ipChoice"><option>Client owns listed custom deliverables after payment</option><option>Contractor owns work and grants the client a license</option><option>Ownership will be stated in an attached schedule</option></select>
+      </div>
+      <div class="field">
+        <label for="confidentialityTerm">Confidentiality Duration / Exceptions</label>
+        <input type="text" id="confidentialityTerm" placeholder="e.g. During the term and 2 years after; trade secrets as law requires">
+      </div>
+      <div class="field">
+        <label for="terminationNotice">Termination and Handoff</label>
+        <input type="text" id="terminationNotice" placeholder="e.g. 14 days written notice; revoke access and return files within 2 days">
+      </div>
+      <div class="field full">
+        <label for="disputeProcess">Dispute Process Chosen by the Parties</label>
+        <input type="text" id="disputeProcess" placeholder="e.g. Written escalation, good-faith meeting, then remedies available under governing law">
       </div>
       <div class="field">
         <label for="startDate">Start Date</label>
@@ -186,7 +234,7 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 
     <!-- Bundle Banner -->
   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:16px 20px;margin-bottom:24px;text-align:center;font-size:14px">
-    ?? <strong>Need all 20 contracts?</strong> Get the complete bundle for <strong>$29</strong> and save $111 &mdash; <a href="https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL" target="_blank" style="color:#2563eb;font-weight:700">Get the Bundle &rarr;</a>
+    <strong>Need the complete template collection?</strong> Review the 20-template bundle for <strong>$29</strong> &mdash; <a href="https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL&utm_source=contractfixpro&utm_medium=onsite&utm_campaign=va_contract_bundle" target="_blank" rel="noopener" class="payhip-link" data-product="contract_bundle" style="color:#2563eb;font-weight:700">View the Bundle &rarr;</a>
   </div>
 
 <!-- tool-content-modules -->
@@ -195,9 +243,21 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
     <h2 class="tool-info-title">How to Use This Virtual Assistant Contract</h2>
     <ol class="tool-steps">
       <li>Select the Virtual Assistant Contract template and enter your business details and virtual assistant information.</li>
-      <li>Define tasks and responsibilities, working hours, communication tools, confidentiality terms, and compensation.</li>
-      <li>Review all clauses and download the contract for both parties to sign.</li>
+      <li>Define tasks, capacity, availability, system access, expense approval, ownership, confidentiality, payment, and exit handling.</li>
+      <li>Review every generated clause, replace placeholders, and obtain appropriate professional review before either party signs.</li>
     </ol>
+  </div>
+  <div class="tool-info-card">
+    <h2 class="tool-info-title">Choose the Operating Model Before Drafting</h2>
+    <table class="decision-table">
+      <thead><tr><th>Model</th><th>Use when</th><th>Evidence to define</th></tr></thead>
+      <tbody>
+        <tr><td>Hourly with cap</td><td>Demand changes week to week</td><td>Time records, approval threshold, rate, invoice cadence</td></tr>
+        <tr><td>Monthly retainer</td><td>The client reserves recurring capacity</td><td>Included capacity, unused hours, overages, response window</td></tr>
+        <tr><td>Fixed deliverable</td><td>Output and acceptance are measurable</td><td>Deliverables, dependencies, acceptance, change process</td></tr>
+      </tbody>
+    </table>
+    <div class="review-note"><strong>Planning boundary:</strong> the generated text is an editable starting point, not a determination of worker classification, enforceability, privacy compliance, or tax treatment.</div>
   </div>
   <div class="tool-info-card">
     <h2 class="tool-info-title">Common Use Cases</h2>
@@ -216,11 +276,11 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
     </div>
     <div class="tool-faq-item">
       <div class="tool-faq-q">What confidentiality protections are needed for virtual assistants?</div>
-      <p class="tool-faq-a">VAs often access sensitive business information including email accounts, financial records, and client data. Include strong confidentiality clauses, data handling procedures, and requirements for secure password management. Require return or destruction of all data upon contract termination.</p>
+      <p class="tool-faq-a">List the information covered, permitted use, access controls, incident reporting, legal exceptions, retention, and return or deletion steps. A confidentiality clause does not replace privacy, security, employment, or sector-specific obligations.</p>
     </div>
     <div class="tool-faq-item">
       <div class="tool-faq-q">Should the contract specify tools and software?</div>
-      <p class="tool-faq-a">Yes. List required tools (Slack, Asana, Google Workspace, etc.) and specify who provides licenses and access. Define data backup responsibilities and whether the VA can use personal devices or must use specified secure systems.</p>
+      <p class="tool-faq-a">List approved systems, who provisions each account, the minimum access level, device rules, credential storage, backup responsibility, and who revokes access at the end. Avoid sharing master passwords through the contract.</p>
     </div>
     </div>
   </div>
@@ -229,10 +289,11 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 <!-- cf-seo-expanded -->
 <div class="seo-section">
   <h2>About Virtual Assistant Contract Generator</h2>
-  <p>ContractFixPro's Virtual Assistant Contract Generator provides a clear, professional framework for service-based business relationships. Whether you are a consultant, virtual assistant, agency, or service provider of any kind, a well-written service agreement is essential to defining exactly what you will deliver, when you will deliver it, and what you will be paid protecting you and your client from costly misunderstandings.</p><br>
-  <p>Our Virtual Assistant Contract Generator covers all the critical elements of a professional service agreement: detailed scope of services, service standards and performance expectations, compensation and payment schedule, term and renewal provisions, termination conditions and notice requirements, intellectual property ownership, confidentiality obligations, and limitation of liability. Each section is designed to be practical and clear rather than overly legalistic.</p><br>
-  <p>A clear service agreement also helps you manage client expectations proactively. When clients know exactly what is included in your service, how changes to scope will be handled, and what the process is for addressing concerns, your service relationships run more smoothly. Our Virtual Assistant Contract Generator gives you the structure to set these boundaries professionally from the first engagement.</p><br>
-  <p>ContractFixPro offers this Virtual Assistant Contract Generator alongside a comprehensive library of professional contract templates for every type of business relationship. All templates are designed for practical use and can be downloaded and customised for your specific service business.</p>
+  <p>A virtual assistant arrangement can combine recurring tasks, access to sensitive systems, variable hours, and work across jurisdictions. A useful draft therefore needs more than names and a fee: it should identify who can request work, what is outside scope, how access is provisioned, what evidence supports an invoice, and how the parties complete a handoff.</p><br>
+  <p>This tool turns those decisions into a planning draft. It does not decide whether the worker is legally an independent contractor, which privacy rules apply, whether a liability limit is valid, or which dispute process is appropriate. Those questions depend on the facts, governing law, and professional advice.</p><br>
+  <p>Before signing, compare the generated text with the actual operating process. Confirm task owners, service windows, approvals, security controls, acceptance criteria, payment triggers, ownership treatment, notice, access revocation, and final file delivery.</p>
+  <h2 style="margin-top:22px">Official Review Sources</h2>
+  <p><a href="https://www.irs.gov/newsroom/worker-classification-101-employee-or-independent-contractor" target="_blank" rel="noopener">IRS: Worker Classification 101</a> explains that classification depends on the relationship and degree of control, not only the contract label. <a href="https://www.ftc.gov/business-guidance/resources/start-security-guide-business" target="_blank" rel="noopener">FTC: Start with Security</a> provides practical guidance on need-to-know access and separate accounts for sensitive data.</p>
 </div>
 
 
@@ -258,54 +319,6 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 <a href="/nda-generator.html" class="related-card"><div class="related-card-name">NDA Generator</div><div class="related-card-desc">Free template</div></a>
 </div>
   </div>
-
-<!-- AFFILIATE_SECTION_START -->
-<style>
-.affiliate-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
-.affiliate-section h2{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--text)}
-.affiliate-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.affiliate-card{display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);transition:all .15s;color:var(--text);text-decoration:none}
-.affiliate-card:hover{border-color:var(--primary);background:var(--primary-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.affiliate-logo{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
-.affiliate-content{flex:1;min-width:0}
-.affiliate-name{font-size:14px;font-weight:700;color:var(--text)}
-.affiliate-desc{font-size:12px;color:var(--text3);margin-top:2px;line-height:1.4}
-.affiliate-cta{font-size:12px;font-weight:700;color:var(--primary);white-space:nowrap;padding:6px 12px;border:1.5px solid var(--primary);border-radius:var(--radius-sm);transition:all .15s;flex-shrink:0}
-.affiliate-card:hover .affiliate-cta{background:var(--primary);color:#fff}
-</style>
-<section class="affiliate-section">
-  <h2>Recommended Tools for Freelancers</h2>
-  <div class="affiliate-grid">
-    <!-- AFFILIATE_LINK: replace with actual affiliate URL -->
-    <a href="https://pandadoc.com" rel="sponsored nofollow noopener" target="_blank" class="affiliate-card">
-      <div class="affiliate-logo">PD</div>
-      <div class="affiliate-content">
-        <div class="affiliate-name">PandaDoc</div>
-        <div class="affiliate-desc">Create professional proposals &amp; contracts</div>
-      </div>
-      <span class="affiliate-cta">Try Free &#8594;</span>
-    </a>
-<!-- AFFILIATE_LINK: replace with actual affiliate URL -->
-    <a href="https://webflow.com" rel="sponsored nofollow noopener" target="_blank" class="affiliate-card">
-      <div class="affiliate-logo">WF</div>
-      <div class="affiliate-content">
-        <div class="affiliate-name">Webflow</div>
-        <div class="affiliate-desc">Build your freelance portfolio website</div>
-      </div>
-      <span class="affiliate-cta">Try Free &#8594;</span>
-    </a>
-<!-- AFFILIATE_LINK: replace with actual affiliate URL -->
-    <a href="https://monday.com" rel="sponsored nofollow noopener" target="_blank" class="affiliate-card">
-      <div class="affiliate-logo">Mo</div>
-      <div class="affiliate-content">
-        <div class="affiliate-name">Monday.com</div>
-        <div class="affiliate-desc">Manage your freelance projects</div>
-      </div>
-      <span class="affiliate-cta">Try Free &#8594;</span>
-    </a>
-  </div>
-</section>
-
 
 </main>
 
@@ -334,7 +347,15 @@ function generateContract() {
   var endDate = document.getElementById("endDate").value || "[End Date]";
   var governingLaw = document.getElementById("governingLaw").value || "[State/Country]";
   var va_tasks = document.getElementById("va_tasks").value || "[VA Tasks / Responsibilities]";
-  var hours_per_week = document.getElementById("hours_per_week").value || "[Hours Per Week]";
+  var hours_per_week = document.getElementById("hours_per_week").value || "[Hours / Capacity and Approval Threshold]";
+  var serviceModel = document.getElementById("serviceModel").value || "[Service and Billing Model]";
+  var responseWindow = document.getElementById("responseWindow").value || "[Availability / Response Window]";
+  var accessRules = document.getElementById("accessRules").value || "[Approved Systems, Access Controls and Data Rules]";
+  var expensePolicy = document.getElementById("expensePolicy").value || "[Expense Approval Process]";
+  var ipChoice = document.getElementById("ipChoice").value || "[Deliverable Ownership Choice]";
+  var confidentialityTerm = document.getElementById("confidentialityTerm").value || "[Confidentiality Duration and Exceptions]";
+  var terminationNotice = document.getElementById("terminationNotice").value || "[Notice, Final Payment, Access Revocation and Handoff]";
+  var disputeProcess = document.getElementById("disputeProcess").value || "[Chosen Escalation and Dispute Process]";
 
   var today = new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
 
@@ -347,9 +368,9 @@ CONTRACTOR: ${contractorName}
 
 ----------------------------------------------------------
 
-1. AGREEMENT
+1. PURPOSE OF THIS DRAFT
 
-This VIRTUAL ASSISTANT SERVICES CONTRACT ("Agreement") is a legally binding contract between the Client and the Contractor, establishing the terms and conditions under which the Contractor will provide services to the Client.
+The parties intend this Agreement to record the virtual assistant services they have selected. They should replace every placeholder, confirm that the text matches their operating process, and obtain appropriate professional review before signing.
 
 ----------------------------------------------------------
 
@@ -365,13 +386,18 @@ Name: ${contractorName}
 
 ----------------------------------------------------------
 
-3. VIRTUAL ASSISTANT DUTIES & RESPONSIBILITIES
+3. SERVICES, CAPACITY & AVAILABILITY
 
 The Contractor agrees to provide the following services to the Client:
 
 ${projectDesc}
 
-The Contractor shall perform the services in a professional and workmanlike manner, consistent with industry standards. Any changes to the scope of work must be agreed upon in writing by both parties prior to commencement of additional work.
+Task list: ${va_tasks}
+Capacity / hours: ${hours_per_week}
+Service and billing model: ${serviceModel}
+Availability / response window: ${responseWindow}
+
+Only an authorized Client contact may request work. The parties will document any added task, capacity, deadline, or dependency and agree to its effect on price and timing before the Contractor begins the changed work.
 
 ----------------------------------------------------------
 
@@ -379,8 +405,9 @@ The Contractor shall perform the services in a professional and workmanlike mann
 
 Total Project Fee: $$${paymentAmount}
 Payment Schedule: ${paymentTerms}
+Expense Approval: ${expensePolicy}
 
-Payment is due according to the schedule above. Late payments will incur a late fee of 1.5% per month on the outstanding balance. The Contractor reserves the right to suspend services for payments overdue by more than 14 days. The Client shall reimburse all reasonable expenses incurred by the Contractor in the performance of services, provided such expenses are pre-approved in writing.
+Invoices, due dates, taxes, payment methods, disputed amounts, late charges, and any right to pause work apply only as expressly written above and as permitted by applicable law. No expense is reimbursable unless it follows the stated approval process.
 
 ----------------------------------------------------------
 
@@ -393,43 +420,60 @@ The Contractor shall make reasonable efforts to complete the services by the agr
 
 ----------------------------------------------------------
 
-6. INTELLECTUAL PROPERTY
+6. SYSTEM ACCESS, DATA & SECURITY
 
-Upon receipt of full payment from the Client, the Contractor assigns to the Client all rights, title, and interest in and to the deliverables created specifically for this project. The Contractor retains the right to: (a) use pre-existing materials, tools, and methodologies; (b) display the work in the Contractor's portfolio unless otherwise agreed in writing.
+${accessRules}
 
-----------------------------------------------------------
-
-7. CONFIDENTIALITY
-
-Both parties agree to keep confidential all proprietary or sensitive information disclosed during this engagement. The receiving party shall not disclose such information to third parties without prior written consent. This confidentiality obligation survives the termination of this Agreement for a period of three (3) years.
+The Client will provision only the access needed for the approved tasks. The Contractor will use the approved credential and device process, report suspected incidents promptly, and will not copy or retain Client data except as authorized. The parties will identify who disables accounts and verifies return or deletion at the end of the engagement.
 
 ----------------------------------------------------------
 
-8. INDEPENDENT CONTRACTOR
+7. DELIVERABLE OWNERSHIP & PRE-EXISTING MATERIALS
 
-The Contractor is an independent contractor and not an employee of the Client. The Contractor is responsible for all taxes arising from compensation received under this Agreement. Nothing in this Agreement shall be construed as creating an employer-employee, partnership, or joint venture relationship.
+Selected treatment: ${ipChoice}
 
-----------------------------------------------------------
-
-9. TERMINATION
-
-Either party may terminate this Agreement with fourteen (14) days written notice. In the event of termination by the Client, the Client agrees to pay for all work completed through the date of termination. The Contractor may terminate immediately if the Client fails to make payment as required. Upon termination, each party shall return or destroy the other party's confidential materials.
+The parties will list the deliverables covered by that treatment and any payment or acceptance condition. Each party retains its pre-existing materials, tools, processes, trademarks, and third-party materials unless a separate written provision states otherwise. Any portfolio use, license, assignment, or open-source component must be expressly identified.
 
 ----------------------------------------------------------
 
-10. LIMITATION OF LIABILITY
+8. CONFIDENTIALITY
 
-The Contractor's total liability under this Agreement shall not exceed the total fees paid by the Client in the three (3) months preceding the claim. Neither party shall be liable for indirect, incidental, or consequential damages.
+Duration / exceptions selected by the parties: ${confidentialityTerm}
 
-----------------------------------------------------------
-
-11. GOVERNING LAW
-
-This Agreement shall be governed by and construed in accordance with the laws of ${governingLaw}. Any disputes shall be resolved through binding arbitration in ${governingLaw} before resort to litigation.
+Confidential information may be used only for the approved services and disclosed only to authorized recipients. The clause should define exclusions, legally required disclosure, security controls, incident notice, retention, and return or deletion. Obligations imposed by privacy, security, employment, or sector-specific law apply independently of this draft.
 
 ----------------------------------------------------------
 
-12. ENTIRE AGREEMENT
+9. WORKER STATUS & TAX RESPONSIBILITIES
+
+The parties intend the relationship stated here: [independent contractor, employee, agency worker, or other status]. A label in a contract does not by itself determine legal classification. The parties should evaluate control, economic dependence, benefits, tax, payroll, registration, and local-law requirements in every relevant jurisdiction.
+
+----------------------------------------------------------
+
+10. TERMINATION, ACCESS REVOCATION & HANDOFF
+
+Selected process: ${terminationNotice}
+
+The parties will state any termination for cause, cure period, final invoice calculation, refund treatment, work-in-progress delivery, account revocation, credential rotation, data return or deletion, and transition assistance. Any immediate suspension or termination right must be expressly agreed and permitted by applicable law.
+
+----------------------------------------------------------
+
+11. RISK ALLOCATION FOR REVIEW
+
+The parties have not accepted a default liability cap, indemnity, insurance requirement, or exclusion of damages through this generator. Any such term should identify the covered risk, exclusions, amount, procedure, and legal limits and should be reviewed for the governing jurisdiction.
+
+----------------------------------------------------------
+
+12. GOVERNING LAW & DISPUTE PROCESS
+
+Proposed governing law: ${governingLaw}
+Selected escalation / dispute process: ${disputeProcess}
+
+The parties should confirm jurisdiction, venue, notices, available remedies, fees, and whether any mediation, arbitration, court, or small-claims provision is valid and appropriate. This generator does not impose arbitration.
+
+----------------------------------------------------------
+
+13. ENTIRE AGREEMENT
 
 This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
 
@@ -456,6 +500,13 @@ function generateContractFromBtn() {
   btn.disabled = true;
   setTimeout(function() {
     generateContract();
+    if (typeof gtag === "function") {
+      gtag("event", "contract_generated", {
+        contract_type: "virtual_assistant",
+        service_model: document.getElementById("serviceModel").value,
+        has_access_rules: Boolean(document.getElementById("accessRules").value.trim())
+      });
+    }
     btn.textContent = "\u2713 Contract Generated!";
     btn.disabled = false;
     // Scroll to preview
@@ -482,9 +533,11 @@ generateContract();
 
 // Download buttons
 document.getElementById("btnPdf").addEventListener("click",function(){
+  if (typeof gtag === "function") gtag("event","checkout_option_viewed",{contract_type:"virtual_assistant",format_requested:"pdf"});
   showDlModal("https://payhip.com/buy?link=XwrTl");
 });
 document.getElementById("btnDoc").addEventListener("click",function(){
+  if (typeof gtag === "function") gtag("event","checkout_option_viewed",{contract_type:"virtual_assistant",format_requested:"word"});
   showDlModal("https://payhip.com/buy?link=XwrTl");
 });
 
@@ -505,22 +558,23 @@ btt.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"
       <div style="border:2px solid #e2e8f0;border-radius:12px;padding:20px;text-align:center">
         <div style="font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">This Template Only</div>
         <div style="font-size:2rem;font-weight:800;color:#1e293b;margin-bottom:16px">$7</div>
-        <a id="dlSingleBtn" href="#" target="_blank" style="display:block;background:#2563eb;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">Buy Now $7</a>
+        <a id="dlSingleBtn" href="#" target="_blank" rel="noopener" class="payhip-link" data-product="virtual_assistant_single" style="display:block;background:#2563eb;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">View Template $7</a>
       </div>
       <div style="border:2px solid #16a34a;border-radius:12px;padding:20px;text-align:center;background:#f0fdf4;position:relative">
-        <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">Save $111</div>
+        <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">20 templates</div>
         <div style="font-size:11px;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">All 20 Templates</div>
         <div style="font-size:2rem;font-weight:800;color:#1e293b;margin-bottom:16px">$29</div>
-        <a href="https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL" target="_blank" style="display:block;background:#16a34a;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#15803d'" onmouseout="this.style.background='#16a34a'">Get Bundle $29</a>
+        <a href="https://payhip.com/order?link=rj4IU&pricing_plan=0XB0RQ73WL" target="_blank" rel="noopener" class="payhip-link" data-product="contract_bundle" style="display:block;background:#16a34a;color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#15803d'" onmouseout="this.style.background='#16a34a'">View Bundle $29</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:12px;color:#94a3b8;margin-top:16px">Instant download &bull; Editable Word + PDF &bull; Commercial license</p>
+    <p style="text-align:center;font-size:12px;color:#64748b;margin-top:16px">Review the product page, included files, license, and terms before purchase.</p>
   </div>
 </div>
 <script>
 function showDlModal(url){document.getElementById('dlSingleBtn').href=url;var m=document.getElementById('dlModal');m.style.display='flex';document.body.style.overflow='hidden';}
 function closeDlModal(){document.getElementById('dlModal').style.display='none';document.body.style.overflow='';}
 document.getElementById('dlModal').addEventListener('click',function(e){if(e.target===this)closeDlModal();});
+document.querySelectorAll('.payhip-link').forEach(function(link){link.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','payhip_checkout_click',{contract_type:'virtual_assistant',product:this.dataset.product||'unknown'});});});
 </script>
 </body>
 </html>
