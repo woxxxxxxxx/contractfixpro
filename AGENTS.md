@@ -44,3 +44,10 @@
 - Added `/affiliate-tracking.js` to all 49 HTML pages and deployed through GitHub Pages in commit `910b92b`.
 - The tracker emits structured GA4 `affiliate_click` events for sponsored links; the shared daily report now reports them by site.
 - Live tracker/homepage checks and the ContractFixPro post-deploy check passed.
+
+## 2026-07-24 AdSense release hardening
+- Fixed the shared preflight rule that incorrectly returned all child blog pages to noindex.
+- Released eight reviewed contract guides with topic-specific scenarios, review steps, evidence records, worked examples, authorship, review dates, and primary sources.
+- Kept unfinished blog drafts and thin guide pages noindex and ad-free.
+- Rebuilt the sitemap from the actual indexable inventory. The release gate reports 35 indexable pages, eight editorial guides, no sitemap defects, and no semantic-duplication alerts.
+- Desktop and mobile browser checks passed without overflow, broken images, duplicate H1 elements, or page script errors.
