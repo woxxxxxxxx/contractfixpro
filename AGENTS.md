@@ -24,6 +24,11 @@
 - [ ] 内容深化
 - [ ] 申请 AdSense
 
+## 2026-08-15 SEO observation and copywriting page
+- Added a reusable equal-window Search Console review for the earliest August 9 optimization batch. The video-editing contract produced the clearest early positive signal; the remaining pages stay locked until their 14-day checkpoint.
+- Expanded `copywriting-contract.html` with an exact-intent answer, a worked SaaS launch-copy project record, revision-versus-scope-change tests, visible review metadata, and updated evidence review while preserving the browser generator.
+- Desktop and 390px mobile checks passed without overflow or script errors. The AdSense release gate remains green at 35 indexable URLs and eight retained guides. Hold the page stable through 2026-08-29.
+
 
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
