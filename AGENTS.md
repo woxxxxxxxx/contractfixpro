@@ -29,6 +29,11 @@
 - Expanded `copywriting-contract.html` with an exact-intent answer, a worked SaaS launch-copy project record, revision-versus-scope-change tests, visible review metadata, and updated evidence review while preserving the browser generator.
 - Desktop and 390px mobile checks passed without overflow or script errors. The AdSense release gate remains green at 35 indexable URLs and eight retained guides. Hold the page stable through 2026-08-29.
 
+## 2026-08-16 music production project record
+- Rebuilt `music-producer-contract.html` as an evidence-led music production planning tool. It now separates composition, sound recording/master, third-party assets, and file handoff instead of presenting them as one automatic ownership decision.
+- Removed fixed legal outcomes from the generated output, including automatic assignment, late fees, confidentiality duration, worker classification, liability cap, termination period, and binding arbitration. The output now records facts, proposals, evidence, and terms for qualified review.
+- Added a worked example, rights-record matrix, bounded FAQ/schema, current U.S. Copyright Office sources, clearer limitations, and a `2026-08-16` sitemap timestamp. Hold this page stable through 2026-08-30 unless a production defect appears.
+
 
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
