@@ -39,6 +39,11 @@
 - Removed automatic legal conclusions from the generated output. The browser tool now produces a factual project record for review and leaves ownership, releases, worker classification, liability, termination, governing law, and dispute procedure unresolved unless the parties document them separately.
 - Added a worked product-video example, production gates, deliverable records, bounded FAQ/schema, and current U.S. Copyright Office and FAA sources. Hold this page stable through 2026-08-30 unless a production defect appears.
 
+## 2026-08-17 project-based consulting record
+- Rebuilt `consulting-agreement.html` around project outcomes, named deliverables, milestone acceptance, client dependencies, change control, economic inputs, access, reusable methods, and unresolved legal terms.
+- Removed the automatic legal agreement, fixed late fee, copyright assignment, confidentiality duration, worker-classification conclusion, termination period, liability cap, and binding arbitration. The browser tool now creates a factual project record for review.
+- Removed the early affiliate-first partner block and added a worked CRM redesign example, project-evidence records, bounded FAQ/schema, and current IRS and U.S. Copyright Office sources. Hold this page stable through 2026-08-31 unless a production defect appears.
+
 
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
