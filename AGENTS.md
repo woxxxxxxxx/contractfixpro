@@ -34,6 +34,11 @@
 - Removed fixed legal outcomes from the generated output, including automatic assignment, late fees, confidentiality duration, worker classification, liability cap, termination period, and binding arbitration. The output now records facts, proposals, evidence, and terms for qualified review.
 - Added a worked example, rights-record matrix, bounded FAQ/schema, current U.S. Copyright Office sources, clearer limitations, and a `2026-08-16` sitemap timestamp. Hold this page stable through 2026-08-30 unless a production defect appears.
 
+## 2026-08-16 video production project record
+- Rebuilt `videography-contract.html` around a production evidence workflow covering shoot plans, locations, releases, licensed assets, drone operations, delivery specifications, review rounds, source files, and usage proposals.
+- Removed automatic legal conclusions from the generated output. The browser tool now produces a factual project record for review and leaves ownership, releases, worker classification, liability, termination, governing law, and dispute procedure unresolved unless the parties document them separately.
+- Added a worked product-video example, production gates, deliverable records, bounded FAQ/schema, and current U.S. Copyright Office and FAA sources. Hold this page stable through 2026-08-30 unless a production defect appears.
+
 
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
