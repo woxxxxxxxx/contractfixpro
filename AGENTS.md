@@ -44,6 +44,11 @@
 - Removed the automatic legal agreement, fixed late fee, copyright assignment, confidentiality duration, worker-classification conclusion, termination period, liability cap, and binding arbitration. The browser tool now creates a factual project record for review.
 - Removed the early affiliate-first partner block and added a worked CRM redesign example, project-evidence records, bounded FAQ/schema, and current IRS and U.S. Copyright Office sources. Hold this page stable through 2026-08-31 unless a production defect appears.
 
+## 2026-08-21 social media management evidence record
+- Rebuilt `social-media-contract.html` around social media management scope, approval, role access, ad-spend authority, sponsored-content disclosures, content rights, reporting provenance, and handoff evidence.
+- Replaced the automatic legal contract with a factual project record. Removed the fixed late fee, confidentiality duration, worker-classification conclusion, automatic copyright assignment, termination period, liability cap, and binding arbitration.
+- Added a fictional retail launch example, evidence matrix, bounded FAQ/schema, current FTC and U.S. Copyright Office sources, and a `2026-08-21` sitemap timestamp. Hold this page stable through 2026-09-04 unless a production defect appears.
+
 
 ## 2026-06-28 AdSense ????
 - Blog ??/??? 16 ????????????? sitemap.xml?
