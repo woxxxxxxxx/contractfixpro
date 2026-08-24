@@ -19,6 +19,12 @@
 - [2026-06-24] LawDepot partner CTA 样式修复：6 个接入页统一使用横向 LawDepot 标识，放大 logo 容器；按钮文字强制白色，避免被文章链接样式覆盖；保留 `rel="sponsored noopener nofollow"`。
 - [2026-06-24] LawDepot logo 二次替换：按用户提供截图抠出透明 PNG，6 个 CTA 页引用 `/assets/img/lawdepot-logo.png`。
 
+## 2026-08-24 video editing evidence record
+- Rebuilt `video-editing-contract.html` as a video editing project record while preserving the exact `video editor contract template` intent, existing scope guidance, browser interaction, and optional download path.
+- Added feedback and acceptance evidence, final-edit rights proposal, license provenance, file retention, and handoff or early-exit records.
+- Removed the generated three-year confidentiality period, worker-classification conclusion, fourteen-day termination rule, three-month liability cap, and automatic governing-law outcome. These remain open terms for qualified review.
+- Local JavaScript/JSON-LD checks, one-H1/unique-ID checks, desktop and 390px interaction tests, and the central AdSense release gate passed. Hold the page stable through 2026-09-07 unless a production defect appears.
+
 ## 待办
 - [ ] 审计全站
 - [ ] 内容深化

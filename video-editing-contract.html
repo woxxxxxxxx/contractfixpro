@@ -12,8 +12,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Video Editor Contract Template: Revisions, Files &amp; Rights</title>
-<meta name="description" content="Draft a video editor contract covering deliverables, revision rounds, project files, licensing, payment, deadlines, and source-file retention.">
+<title>Video Editor Contract Template: Scope and Evidence Record</title>
+<meta name="description" content="Plan a video editor contract with a factual record for deliverables, feedback, acceptance, project files, licenses, payment, deadlines, and handoff.">
 <link rel="canonical" href="https://contractfixpro.com/video-editing-contract.html">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -102,8 +102,8 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1638874323475457"
      crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/assets/css/tool-modules.css">
-<meta property="og:title" content="Video Editor Contract Template: Revisions, Files &amp; Rights">
-<meta property="og:description" content="Draft a video editor contract covering deliverables, revision rounds, project files, licensing, payment, deadlines, and source-file retention.">
+<meta property="og:title" content="Video Editor Contract Template: Scope and Evidence Record">
+<meta property="og:description" content="Plan a video editor contract with a factual record for deliverables, feedback, acceptance, project files, licenses, payment, deadlines, and handoff.">
 <meta property="og:url" content="https://contractfixpro.com/video-editing-contract.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -113,12 +113,12 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
   "@graph": [
     {
       "@type": "WebApplication",
-      "name": "Video Editor Contract Template and Generator",
+      "name": "Video Editor Contract Template and Project Record",
       "url": "https://contractfixpro.com/video-editing-contract.html",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
-      "description": "A free browser-based drafting tool for planning a video editor contract with project scope, revisions, file handling, asset licensing, payment, and schedule terms. Optional formatted downloads are sold separately.",
-      "dateModified": "2026-08-09",
+      "description": "A free browser-based planning tool that records video editing scope, feedback and acceptance evidence, file handling, asset licenses, payment inputs, and handoff decisions without creating automatic legal outcomes.",
+      "dateModified": "2026-08-24",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -162,7 +162,7 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
           "name": "Is this video editor contract template free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can customize and review the browser draft without signing up. Optional formatted Word and PDF downloads are sold separately from $7, and you can review the full draft before deciding whether to buy."
+            "text": "You can customize and review the browser planning record without signing up. Optional formatted Word and PDF downloads are sold separately from $7, and you can inspect the complete record before deciding whether to buy."
           }
         }
       ]
@@ -189,13 +189,13 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 <main id="main-content">
 
   <div class="tool-hero">
-    <h1>Video Editor Contract Template for Freelance Projects</h1>
-    <p>Customize and review a practical browser draft for YouTube videos, social clips, commercials, or post-production. Define deliverables, revision rounds, project-file access, licensing, payment, and source-file retention before work begins.</p>
-    <div class="page-meta"><span>Free browser draft</span><span>Optional downloads from $7</span><span>Reviewed August 9, 2026</span></div>
+    <h1>Video Editor Contract Template and Project Record</h1>
+    <p>Build a factual record for YouTube videos, social clips, commercials, or post-production before anyone turns it into a signed agreement. Separate deliverables, feedback evidence, acceptance, project-file access, licenses, payment, and handoff from legal terms that still require review.</p>
+    <div class="page-meta"><span>Free planning record</span><span>Optional downloads from $7</span><span>Reviewed August 24, 2026</span></div>
   </div>
 
   <div class="form-card">
-    <h2>Fill in the Contract Details</h2>
+    <h2>Record the Project Facts and Proposals</h2>
     <div class="form-grid">
       <div class="field">
         <label for="clientName">Client Name</label>
@@ -216,6 +216,10 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
       <div class="field">
         <label for="revision_rounds">Revision Rounds</label>
         <input type="text" id="revision_rounds" placeholder="e.g. 2">
+      </div>
+      <div class="field full">
+        <label for="approval_workflow">Feedback and Acceptance Evidence</label>
+        <textarea id="approval_workflow" placeholder="e.g. producer submits one time-coded Frame.io list per round; marketing lead accepts the final export by email"></textarea>
       </div>
       <div class="field full">
         <label for="delivery_formats">Deliverables and Export Formats</label>
@@ -245,6 +249,10 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
           <option value="not permitted">Not permitted</option>
         </select>
       </div>
+      <div class="field full">
+        <label for="rights_proposal">Final-Edit Rights Proposal</label>
+        <textarea id="rights_proposal" placeholder="e.g. client proposes a worldwide license to the approved exports after final payment; editor templates, plug-ins, and third-party assets remain excluded"></textarea>
+      </div>
       <div class="field">
         <label for="paymentAmount">Payment Amount ($)</label>
         <input type="text" id="paymentAmount" placeholder="e.g. 2500">
@@ -265,14 +273,18 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
         <label for="governingLaw">Governing Law (State / Country)</label>
         <input type="text" id="governingLaw" placeholder="e.g. California, USA">
       </div>
+      <div class="field full">
+        <label for="handoff_plan">Handoff or Early-Exit Evidence</label>
+        <textarea id="handoff_plan" placeholder="e.g. record approved cuts, completed work, open comments, licensed-asset receipts, project-file status, storage date, and access revocation"></textarea>
+      </div>
     </div>
-    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Contract</button>
+    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Project Record</button>
   </div>
 
-  <div class="success-banner" id="successBanner">&#10003; Your browser draft has been generated. Review it below before choosing an optional formatted download.</div>
+  <div class="success-banner" id="successBanner">&#10003; Project record generated. Verify every entry and resolve the open terms before signing.</div>
   <div class="preview-card" id="previewCard">
-    <h2>Contract Preview</h2>
-    <div id="contractPreview">Fill in the form above to generate your contract...</div>
+    <h2>Project Record Preview</h2>
+    <div id="contractPreview">Fill in the form above to generate a factual project record...</div>
     <div class="download-row">
       <button class="btn-dl btn-dl-pdf" id="btnPdf">Get formatted PDF - $7</button>
       <button class="btn-dl btn-dl-doc" id="btnDoc">Get editable Word file - $7</button>
@@ -292,7 +304,7 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
       <li>Enter the editor, client, project scope, schedule, and payment arrangement.</li>
       <li>List every master and cut, its aspect ratio, resolution, runtime, caption requirement, and delivery format.</li>
       <li>Set revision rounds, source-file retention, project-file delivery, asset responsibility, and portfolio permission.</li>
-      <li>Review the complete browser draft together. Replace assumptions with written decisions before either party signs.</li>
+      <li>Review the project record together. Replace assumptions with evidence and send unresolved legal terms for qualified review before either party signs.</li>
       <li>Use the on-page draft at no charge; optional formatted Word and PDF downloads are sold separately from $7.</li>
     </ol>
   </div>
@@ -456,26 +468,29 @@ function generateContract() {
   var governingLaw = document.getElementById("governingLaw").value || "[State/Country]";
   var video_length = document.getElementById("video_length").value || "[Estimated Final Video Length]";
   var revision_rounds = document.getElementById("revision_rounds").value || "[Revision Rounds]";
+  var approval_workflow = document.getElementById("approval_workflow").value || "[Feedback Channel, Approver, and Acceptance Evidence]";
   var delivery_formats = document.getElementById("delivery_formats").value || "[Deliverables and Export Formats]";
   var project_files = document.getElementById("project_files").value;
   var retention_period = document.getElementById("retention_period").value || "[Source File Retention Period]";
   var asset_responsibility = document.getElementById("asset_responsibility").value || "[Asset and Licensing Responsibility]";
   var portfolio_permission = document.getElementById("portfolio_permission").value;
+  var rights_proposal = document.getElementById("rights_proposal").value || "[Final-Edit Rights Proposal]";
+  var handoff_plan = document.getElementById("handoff_plan").value || "[Handoff or Early-Exit Evidence Plan]";
 
   var today = new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
 
-  var contract = `VIDEO EDITING CONTRACT AGREEMENT
+  var contract = `VIDEO EDITING PROJECT RECORD — DRAFT FOR REVIEW
 
-This Agreement is entered into as of ${today}, by and between:
+Record prepared on ${today} for:
 
 CLIENT: ${clientName}
 CONTRACTOR: ${contractorName}
 
 ----------------------------------------------------------
 
-1. AGREEMENT
+1. PURPOSE AND LIMIT
 
-This draft records the terms under which the Contractor will provide video editing services to the Client. The parties should review and adapt it for their project and applicable law before signing.
+This tool records project facts, proposals, evidence, and open decisions for a video editing engagement. It is not a signed agreement and does not decide ownership, worker status, confidentiality, termination, liability, governing law, or dispute procedure.
 
 ----------------------------------------------------------
 
@@ -493,7 +508,7 @@ Name: ${contractorName}
 
 3. VIDEO EDITING SCOPE
 
-The Contractor agrees to provide the following services to the Client:
+Proposed services:
 
 ${projectDesc}
 
@@ -501,92 +516,86 @@ Final video length: ${video_length}
 Deliverables and export formats: ${delivery_formats}
 Editable project files are ${project_files}.
 
-The Client will provide one consolidated feedback list per revision round. The fee includes ${revision_rounds} revision round(s). Replacement footage, a new creative direction, or changes requested after approval are outside the original scope and require written approval of any fee or schedule change.
+Proposed included revision rounds: ${revision_rounds}
 
-Any changes to the scope of work must be agreed upon in writing by both parties before additional work begins.
-
-----------------------------------------------------------
-
-4. PAYMENT TERMS
-
-Total Project Fee: $${paymentAmount}
-Payment Schedule: ${paymentTerms}
-
-Payment is due according to the schedule above. Any late fee or collection charge must be separately stated, agreed in writing, and permitted by applicable law. The Contractor may pause work on an overdue invoice after giving written notice. The Client will reimburse only expenses approved in writing before purchase.
+Open scope decisions: what counts as one round, what counts as a new direction, who may request changes, and what evidence authorizes a fee or schedule change.
 
 ----------------------------------------------------------
 
-5. TIMELINE
+4. FEEDBACK AND ACCEPTANCE RECORD
+
+${approval_workflow}
+
+Retain the submitted feedback list, version identifier, delivery timestamp, approval message, and any written change request. Do not treat silence as acceptance unless a qualified agreement expressly establishes that rule.
+
+----------------------------------------------------------
+
+5. ECONOMIC INPUTS
+
+Project Fee Input: $${paymentAmount}
+Payment Schedule Proposal: ${paymentTerms}
+
+Open decisions for qualified review: invoice trigger, taxes, approved expenses, late-payment terms, pause rights, refunds, kill fees, and evidence required for each charge.
+
+----------------------------------------------------------
+
+6. TIMELINE AND DEPENDENCIES
 
 Project Start Date: ${startDate}
 Project End Date / Deadline: ${endDate}
 
-The Contractor shall make reasonable efforts to complete the services by the agreed deadline. Delays caused by the Client's failure to provide necessary materials, feedback, or approvals shall not be attributed to the Contractor. The Contractor shall notify the Client promptly of any anticipated delays.
+Record footage-delivery dates, missing-asset notices, feedback deadlines, approval dates, version history, and every written schedule change. This record does not automatically assign responsibility for delay.
 
 ----------------------------------------------------------
 
-6. SOURCE MATERIALS, LICENSES, AND FILE RETENTION
+7. SOURCE MATERIALS, LICENSES, AND FILE RETENTION
 
 Asset and licensing responsibility: ${asset_responsibility}
 
-Each party represents that it has permission to provide and use the materials it contributes. The Contractor will retain source footage and working files for ${retention_period}. After that period, the Contractor may delete them unless the parties agree in writing to paid storage or another handoff.
+Proposed source-footage and working-file retention: ${retention_period}
+
+Retain the asset source, license or permission evidence, purchaser, approved use, territory or platform limits, expiration date where applicable, and final file version. Do not infer that an asset is cleared merely because one party supplied it.
 
 ----------------------------------------------------------
 
-7. INTELLECTUAL PROPERTY AND PORTFOLIO USE
+8. RIGHTS AND PORTFOLIO PROPOSAL
 
-After full payment, the Client receives the rights in the final deliverables that the parties have agreed to transfer. Pre-existing materials, reusable tools, templates, plug-ins, fonts, stock assets, and third-party materials remain subject to their existing ownership and license terms. Editable project files are ${project_files}.
+Final-edit rights proposal: ${rights_proposal}
 
-Use of the final work in the Contractor's portfolio is ${portfolio_permission}.
+Editable project-file proposal: ${project_files}.
+Portfolio-use proposal: ${portfolio_permission}.
 
-----------------------------------------------------------
-
-8. CONFIDENTIALITY
-
-Both parties agree to keep confidential all proprietary or sensitive information disclosed during this engagement. The receiving party shall not disclose such information to third parties without prior written consent. This confidentiality obligation survives the termination of this Agreement for a period of three (3) years.
+No ownership, work-made-for-hire, assignment, license, project-file, or portfolio-use outcome is created by this record. Identify pre-existing materials, reusable tools, templates, plug-ins, fonts, stock assets, and other third-party terms separately.
 
 ----------------------------------------------------------
 
-9. INDEPENDENT CONTRACTOR
+9. HANDOFF OR EARLY-EXIT RECORD
 
-The Contractor is an independent contractor and not an employee of the Client. The Contractor is responsible for all taxes arising from compensation received under this Agreement. Nothing in this Agreement shall be construed as creating an employer-employee, partnership, or joint venture relationship.
+${handoff_plan}
 
-----------------------------------------------------------
-
-10. TERMINATION
-
-Either party may terminate this Agreement with fourteen (14) days written notice. In the event of termination by the Client, the Client agrees to pay for all work completed through the date of termination. The Contractor may terminate immediately if the Client fails to make payment as required. Upon termination, each party shall return or destroy the other party's confidential materials.
+Record the last accepted cut, completed work, open comments, file and storage status, licensed-asset evidence, outstanding economic inputs, access revocation, and the date of each handoff. This record does not create a termination right or payment outcome.
 
 ----------------------------------------------------------
 
-11. LIMITATION OF LIABILITY
+10. TERMS REQUIRING QUALIFIED REVIEW
 
-The Contractor's total liability under this Agreement shall not exceed the total fees paid by the Client in the three (3) months preceding the claim. Neither party shall be liable for indirect, incidental, or consequential damages.
+The parties have not resolved in this tool: confidentiality scope and duration; privacy and security duties; worker classification and taxes; intellectual-property transfer; warranties; indemnity; liability; termination rights; governing law; dispute procedure; or signature formalities.
 
-----------------------------------------------------------
-
-12. GOVERNING LAW
-
-This Agreement shall be governed by and construed in accordance with the laws of ${governingLaw}. The parties should state any agreed negotiation, mediation, arbitration, court, venue, and notice process in writing after checking local requirements.
+Jurisdiction noted for review: ${governingLaw}
 
 ----------------------------------------------------------
 
-13. ENTIRE AGREEMENT
+REVIEW CHECKPOINTS
 
-This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
-
-----------------------------------------------------------
-
-SIGNATURES
-
-CLIENT: ___________________________    Date: ____________
-Name: ${clientName}
-
-CONTRACTOR: _______________________    Date: ____________
-Name: ${contractorName}
+[ ] Deliverables, versions, formats, and exclusions confirmed
+[ ] Feedback channel, approver, and acceptance evidence confirmed
+[ ] Asset sources and license evidence checked
+[ ] Project-file, storage, and handoff proposals confirmed
+[ ] Economic inputs and written changes reconciled
+[ ] Open legal terms reviewed by qualified professionals where appropriate
 
 ----------------------------------------------------------
-Generated by ContractFixPro.com | For reference only - consult a legal professional for advice.`;
+Generated by ContractFixPro.com | Planning record only — not legal advice or a signed agreement.`;
 
   document.getElementById("contractPreview").textContent = contract;
 }
