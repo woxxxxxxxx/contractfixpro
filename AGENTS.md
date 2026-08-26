@@ -19,6 +19,12 @@
 - [2026-06-24] LawDepot partner CTA 样式修复：6 个接入页统一使用横向 LawDepot 标识，放大 logo 容器；按钮文字强制白色，避免被文章链接样式覆盖；保留 `rel="sponsored noopener nofollow"`。
 - [2026-06-24] LawDepot logo 二次替换：按用户提供截图抠出透明 PNG，6 个 CTA 页引用 `/assets/img/lawdepot-logo.png`。
 
+## 2026-08-26 virtual assistant service and access record
+- Rebuilt `virtual-assistant-contract.html` output as a factual service and access record while preserving the virtual-assistant-contract search intent and browser workflow.
+- Added task-request approval, completion and invoice evidence, data-category and incident handling, plus handoff evidence ownership fields.
+- Removed the automatic entire-agreement outcome and signature presentation; integration, amendment, signature, worker-status, privacy, ownership, liability, termination, governing-law, and dispute terms remain open for qualified review.
+- Updated the sitemap date to `2026-08-26`; hold the page stable through `2026-09-09` unless a production defect appears.
+
 ## 2026-08-24 video editing evidence record
 - Rebuilt `video-editing-contract.html` as a video editing project record while preserving the exact `video editor contract template` intent, existing scope guidance, browser interaction, and optional download path.
 - Added feedback and acceptance evidence, final-edit rights proposal, license provenance, file retention, and handoff or early-exit records.

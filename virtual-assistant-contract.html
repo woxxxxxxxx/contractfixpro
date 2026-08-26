@@ -39,10 +39,10 @@ main{max-width:860px;margin:0 auto;padding:24px 20px 60px;width:100%;flex:1}
 .form-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
 .form-card h2{font-size:1rem;font-weight:700;margin-bottom:20px;color:var(--text)}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:6px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field.full{grid-column:1/-1}
 .field label{font-size:13px;font-weight:600;color:var(--text2)}
-.field input,.field select,.field textarea{padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--text);background:var(--bg2);transition:border-color .15s,box-shadow .15s;outline:none}
+.field input,.field select,.field textarea{width:100%;min-width:0;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--text);background:var(--bg2);transition:border-color .15s,box-shadow .15s;outline:none}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
 .field textarea{resize:vertical;min-height:80px}
 .btn-primary{margin-top:20px;padding:12px 28px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;font-family:inherit}
@@ -181,6 +181,18 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
         <label for="accessRules">Systems, Data and Access Rules</label>
         <textarea id="accessRules" placeholder="List approved systems, least-privilege access, password manager, device rules, prohibited downloads, and access removal owner"></textarea>
       </div>
+      <div class="field full">
+        <label for="requestEvidence">Task Request and Approval Evidence</label>
+        <textarea id="requestEvidence" placeholder="Name the request channel, task owner, approval record, due date, priority rule, and evidence kept for scope changes"></textarea>
+      </div>
+      <div class="field full">
+        <label for="completionEvidence">Completion and Acceptance Evidence</label>
+        <textarea id="completionEvidence" placeholder="List the completion record, reviewer, acceptance criteria, correction window, and evidence supporting invoices"></textarea>
+      </div>
+      <div class="field full">
+        <label for="dataProfile">Data Categories and Incident Process</label>
+        <textarea id="dataProfile" placeholder="List data categories, approved storage or transfer locations, retention rule, incident contact, and notification evidence"></textarea>
+      </div>
       <div class="field">
         <label for="expensePolicy">Expense Approval</label>
         <input type="text" id="expensePolicy" placeholder="e.g. Written approval required before any expense">
@@ -196,6 +208,10 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
       <div class="field">
         <label for="terminationNotice">Termination and Handoff</label>
         <input type="text" id="terminationNotice" placeholder="e.g. 14 days written notice; revoke access and return files within 2 days">
+      </div>
+      <div class="field">
+        <label for="handoffEvidence">Handoff Evidence Owner</label>
+        <input type="text" id="handoffEvidence" placeholder="e.g. Operations lead signs the file, access, and deletion checklist">
       </div>
       <div class="field full">
         <label for="disputeProcess">Dispute Process Chosen by the Parties</label>
@@ -214,12 +230,12 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
         <input type="text" id="governingLaw" placeholder="e.g. California, USA">
       </div>
     </div>
-    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Contract</button>
+    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Service &amp; Access Record</button>
   </div>
 
-  <div class="success-banner" id="successBanner">&#10003; Your contract has been generated. Review below and download when ready.</div>
+  <div class="success-banner" id="successBanner">&#10003; Your service and access record has been generated. Review the facts and open terms below.</div>
   <div class="preview-card" id="previewCard">
-    <h2>Contract Preview</h2>
+    <h2>Service &amp; Access Record Preview</h2>
     <div id="contractPreview">Fill in the form above to generate your contract...</div>
     <div class="download-row">
       <button class="btn-dl btn-dl-pdf" id="btnPdf">&#8595; Download PDF</button>
@@ -377,26 +393,30 @@ function generateContract() {
   var serviceModel = document.getElementById("serviceModel").value || "[Service and Billing Model]";
   var responseWindow = document.getElementById("responseWindow").value || "[Availability / Response Window]";
   var accessRules = document.getElementById("accessRules").value || "[Approved Systems, Access Controls and Data Rules]";
+  var requestEvidence = document.getElementById("requestEvidence").value || "[Request Channel, Task Owner, Approval and Change Evidence]";
+  var completionEvidence = document.getElementById("completionEvidence").value || "[Completion, Review, Acceptance and Invoice Evidence]";
+  var dataProfile = document.getElementById("dataProfile").value || "[Data Categories, Approved Locations, Retention and Incident Process]";
   var expensePolicy = document.getElementById("expensePolicy").value || "[Expense Approval Process]";
   var ipChoice = document.getElementById("ipChoice").value || "[Deliverable Ownership Choice]";
   var confidentialityTerm = document.getElementById("confidentialityTerm").value || "[Confidentiality Duration and Exceptions]";
   var terminationNotice = document.getElementById("terminationNotice").value || "[Notice, Final Payment, Access Revocation and Handoff]";
+  var handoffEvidence = document.getElementById("handoffEvidence").value || "[Owner and Evidence for File Return, Access Revocation and Data Disposition]";
   var disputeProcess = document.getElementById("disputeProcess").value || "[Chosen Escalation and Dispute Process]";
 
   var today = new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
 
-  var contract = `VIRTUAL ASSISTANT SERVICES CONTRACT
+  var contract = `VIRTUAL ASSISTANT SERVICE & ACCESS RECORD
 
-This Agreement is entered into as of ${today}, by and between:
+Record prepared on ${today} for:
 
 CLIENT: ${clientName}
 CONTRACTOR: ${contractorName}
 
 ----------------------------------------------------------
 
-1. PURPOSE OF THIS DRAFT
+1. PURPOSE AND REVIEW STATUS
 
-The parties intend this Agreement to record the virtual assistant services they have selected. They should replace every placeholder, confirm that the text matches their operating process, and obtain appropriate professional review before signing.
+This document records operating facts, evidence locations, proposals, and unresolved terms for a virtual assistant engagement. It does not create a default legal agreement or decide worker status, privacy duties, ownership, liability, termination rights, governing law, or dispute procedure. Replace every placeholder and obtain appropriate fact-specific and jurisdiction-specific review before using it as an agreement.
 
 ----------------------------------------------------------
 
@@ -425,6 +445,9 @@ Availability / response window: ${responseWindow}
 
 Only an authorized Client contact may request work. The parties will document any added task, capacity, deadline, or dependency and agree to its effect on price and timing before the Contractor begins the changed work.
 
+Task request / approval evidence: ${requestEvidence}
+Completion / acceptance evidence: ${completionEvidence}
+
 ----------------------------------------------------------
 
 4. PAYMENT TERMS
@@ -451,6 +474,8 @@ The Contractor shall make reasonable efforts to complete the services by the agr
 ${accessRules}
 
 The Client will provision only the access needed for the approved tasks. The Contractor will use the approved credential and device process, report suspected incidents promptly, and will not copy or retain Client data except as authorized. The parties will identify who disables accounts and verifies return or deletion at the end of the engagement.
+
+Data categories / approved locations / incident process: ${dataProfile}
 
 ----------------------------------------------------------
 
@@ -479,6 +504,7 @@ The parties intend the relationship stated here: [independent contractor, employ
 10. TERMINATION, ACCESS REVOCATION & HANDOFF
 
 Selected process: ${terminationNotice}
+Handoff evidence owner: ${handoffEvidence}
 
 The parties will state any termination for cause, cure period, final invoice calculation, refund treatment, work-in-progress delivery, account revocation, credential rotation, data return or deletion, and transition assistance. Any immediate suspension or termination right must be expressly agreed and permitted by applicable law.
 
@@ -499,22 +525,22 @@ The parties should confirm jurisdiction, venue, notices, available remedies, fee
 
 ----------------------------------------------------------
 
-13. ENTIRE AGREEMENT
+13. OPEN TERMS AND EVIDENCE CHECK
 
-This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
+Before converting this record into an agreement, the parties should identify the evidence supporting scope, approvals, completed work, invoices, expenses, system access, data handling, deliverable rights, incidents, file return, access revocation, and deletion or retention. Any integration clause, amendment rule, signature method, notice rule, or precedence among schedules remains open unless separately reviewed and accepted.
 
 ----------------------------------------------------------
 
-SIGNATURES
+REVIEW ACKNOWLEDGMENTS
 
-CLIENT: ___________________________    Date: ____________
+CLIENT REVIEWER: __________________    Date: ____________
 Name: ${clientName}
 
-CONTRACTOR: _______________________    Date: ____________
+SERVICE PROVIDER REVIEWER: ________    Date: ____________
 Name: ${contractorName}
 
 ----------------------------------------------------------
-Generated by ContractFixPro.com | For reference only &mdash; consult a legal professional for advice.`;
+Generated by ContractFixPro.com | Factual planning record only &mdash; unresolved legal terms require qualified review.`;
 
   document.getElementById("contractPreview").textContent = contract;
 }
@@ -533,7 +559,7 @@ function generateContractFromBtn() {
         has_access_rules: Boolean(document.getElementById("accessRules").value.trim())
       });
     }
-    btn.textContent = "\u2713 Contract Generated!";
+    btn.textContent = "\u2713 Record Generated!";
     btn.disabled = false;
     // Scroll to preview
     document.getElementById("previewCard").scrollIntoView({behavior:"smooth", block:"start"});
