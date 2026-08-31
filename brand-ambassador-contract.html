@@ -121,7 +121,7 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
 
   <div class="tool-hero">
     <h1>Free Brand Ambassador Contract Template &amp; Generator</h1>
-    <p>Create an editable first draft that records deliverables, disclosures, approval, usage rights, exclusivity, compensation, and exit terms before work begins.</p>
+    <p>Prepare a campaign review record covering deliverables, disclosures, approval, usage rights, exclusivity, compensation, and open terms before work begins.</p>
   </div>
 
   <div class="form-card">
@@ -197,13 +197,13 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
         <input type="text" id="governingLaw" placeholder="e.g. California, USA">
       </div>
     </div>
-    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Contract</button>
+    <button class="btn-primary" id="generateBtn" onclick="generateContractFromBtn()">Generate Review Record</button>
   </div>
 
-  <div class="success-banner" id="successBanner">&#10003; Your contract has been generated. Review below and download when ready.</div>
+  <div class="success-banner" id="successBanner">&#10003; Your review record is ready. Resolve open terms before preparing an agreement.</div>
   <div class="preview-card" id="previewCard">
-    <h2>Contract Preview</h2>
-    <div id="contractPreview">Fill in the form above to generate your contract...</div>
+    <h2>Campaign Review Record</h2>
+    <div id="contractPreview">Fill in the form above to generate your campaign review record...</div>
     <div class="download-row">
       <button class="btn-dl btn-dl-pdf" id="btnPdf">&#8595; Download PDF</button>
       <button class="btn-dl btn-dl-doc" id="btnDoc">&#8595; Download Word (.docx)</button>
@@ -246,13 +246,14 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
     </div>
     <div class="tool-faq-item">
       <div class="tool-faq-q">How do I handle product seeding in a brand ambassador contract?</div>
-      <p class="tool-faq-a">Include a section detailing what products or services the brand will provide, whether they must be returned, and any restrictions on how gifted items can be used or discussed. Specify the retail value for tax reporting purposes.</p>
+      <p class="tool-faq-a">Include a section detailing what products or services the brand will provide, whether they must be returned, and any restrictions on how gifted items can be used or discussed. Record the product value and supporting documents; confirm valuation and tax treatment with a qualified adviser instead of assuming retail price is the reporting value.</p>
     </div>
     </div>
   </div>
 
   <section class="review-card" aria-labelledby="review-title">
     <h2 id="review-title">Review before anyone signs</h2>
+    <p>Output safeguards updated August 31, 2026. Confidentiality duration, worker status, document precedence, and acceptance remain open for review. For U.S. federal employment tax classification, consult the <a href="https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee" target="_blank" rel="noopener">IRS relationship-factors guidance</a>; other legal tests may apply.</p>
     <ul>
       <li>Confirm exact post counts, deadlines, platforms, approval time, and reporting evidence.</li>
       <li>Separate organic reposting from paid ads, editing, whitelisting, and perpetual usage.</li>
@@ -275,7 +276,7 @@ footer{background:var(--text);color:#94a3b8;padding:28px 20px}
   <p>ContractFixPro's Brand Ambassador Contract Generator is designed for creative professionals who need formal, written agreements to govern their client engagements. Creative projects whether photography, videography, music production, social media management, brand ambassador work, or influencer marketing involve unique considerations around usage rights, content delivery, approval processes, and compensation that must be clearly documented before a project begins.</p><br>
   <p>Our Brand Ambassador Contract Generator covers the specific requirements of creative engagements: detailed description of deliverables (number of images, videos, posts, or other content), licensing terms for how and where the content may be used, exclusivity periods if applicable, approval and revision processes, payment schedule tied to delivery milestones, and provisions for additional usage or extended licensing beyond the original agreement.</p><br>
   <p>Intellectual property is particularly important in creative work. Who owns the raw files? Can the client modify the work? Are there usage restrictions by geography or time period? Can you use the work in your portfolio? Our Brand Ambassador Contract Generator addresses these questions explicitly, preventing misunderstandings that commonly arise between creative professionals and their clients.</p><br>
-  <p>ContractFixPro provides this Brand Ambassador Contract Generator to help creative professionals establish the professional, business-focused relationships their talent deserves. A solid contract protects your creative work, ensures you get paid appropriately, and sets clear expectations that lead to better client relationships.</p>
+  <p>ContractFixPro provides this Brand Ambassador Contract Generator to help creative professionals establish the professional, business-focused relationships their talent deserves. Documenting proposals can reveal missing permissions, disputed scope, and unclear payment evidence. This record cannot guarantee payment or protection.</p>
 </div>
 
 
@@ -392,18 +393,18 @@ function generateContract() {
 
   var today = new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
 
-  var contract = `BRAND AMBASSADOR AGREEMENT
+  var contract = `BRAND AMBASSADOR CAMPAIGN REVIEW RECORD
 
-This Agreement is entered into as of ${today}, by and between:
+Prepared on ${today} for review by:
 
 CLIENT: ${clientName}
 CONTRACTOR: ${contractorName}
 
 ----------------------------------------------------------
 
-1. AGREEMENT
+1. REVIEW STATUS
 
-This draft records the terms the Client and Contractor intend to review for a brand ambassador engagement. It becomes an agreement only when completed, reviewed, accepted, and signed in a manner valid under applicable law.
+This record collects proposed campaign terms for discussion. The clauses below are draft proposals, not evidence of consent. Resolve open terms and review the final agreement separately before work begins.
 
 ----------------------------------------------------------
 
@@ -488,15 +489,15 @@ The Contractor shall make reasonable efforts to complete the services by the agr
 
 10. CONFIDENTIALITY & PRE-EXISTING MATERIALS
 
-Both parties agree to keep confidential all proprietary or sensitive information disclosed during this engagement. The receiving party shall not disclose such information to third parties without prior written consent. This confidentiality obligation survives the termination of this Agreement for a period of three (3) years.
+OPEN CONFIDENTIALITY TERMS: Record the protected information, permitted recipients and uses, exclusions, return or deletion process, and proposed duration. No confidentiality period is selected by this tool. Keep public sponsorship disclosures separate from confidential campaign information; obtain review before accepting restrictions.
 
 Each party retains its pre-existing names, trademarks, content, tools, and materials. Campaign-content usage is governed by Section 6 rather than an implied assignment of all rights.
 
 ----------------------------------------------------------
 
-11. INDEPENDENT CONTRACTOR
+11. WORKING-RELATIONSHIP FACTS FOR REVIEW
 
-The Contractor is an independent contractor and not an employee of the Client. The Contractor is responsible for all taxes arising from compensation received under this Agreement. Nothing in this Agreement shall be construed as creating an employer-employee, partnership, or joint venture relationship.
+Record who directs how the work is performed, who supplies equipment and pays expenses, other client work, benefits, and the expected duration of the relationship. The labels Client and Contractor in this form do not determine employment or tax status. Have the actual facts and applicable jurisdiction reviewed before assigning payroll or tax responsibilities.
 
 ----------------------------------------------------------
 
@@ -522,19 +523,17 @@ The parties should specify venue, notice method, escalation steps, court or arbi
 
 ----------------------------------------------------------
 
-15. ENTIRE AGREEMENT
+15. DOCUMENT PRECEDENCE AND ACCEPTANCE TO REVIEW
 
-This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements. This Agreement may only be modified in writing signed by both parties.
+List the campaign brief, approved deliverables, usage-rights proposal, disclosure checklist, prior agreements, and any conflicting instructions. Record document versions and ask the parties to resolve precedence, amendment procedure, and acceptance requirements with qualified review. This generated record does not replace prior agreements or establish that any terms have been accepted.
 
 ----------------------------------------------------------
 
-SIGNATURES
+REVIEW HANDOFF
 
-CLIENT: ___________________________    Date: ____________
-Name: ${clientName}
-
-CONTRACTOR: _______________________    Date: ____________
-Name: ${contractorName}
+Brand reviewer: ${clientName}
+Ambassador reviewer: ${contractorName}
+Record unresolved terms, evidence references, reviewer names, and the next review date separately. No signature or acceptance is recorded by generating this output.
 
 ----------------------------------------------------------
 Generated by ContractFixPro.com | Planning draft only; not legal advice or a guarantee of enforceability.`;
@@ -549,7 +548,7 @@ function generateContractFromBtn() {
   btn.disabled = true;
   setTimeout(function() {
     generateContract();
-    btn.textContent = "\u2713 Contract Generated!";
+    btn.textContent = "\u2713 Review Record Ready!";
     btn.disabled = false;
     // Scroll to preview
     document.getElementById("previewCard").scrollIntoView({behavior:"smooth", block:"start"});

@@ -8,9 +8,9 @@
 - 部署方式：GitHub Pages（git push origin master）
 
 ## 当前进度
-- AdSense 状态：正在准备
-- 上次审计完成：待开始
-- 下一步：内容深化 + AdSense 申请
+- AdSense 状态：技术门禁通过；逐页内容价值审核未完成，不自动申请
+- 上次审计完成：2026-08-31，35 URL 静态门禁通过；品牌大使页维护修复
+- 下一步：品牌大使页部署读回；观察至 2026-09-14 后再评估，不把日期当审核批准
 
 ## 专属配置
 - PayHip 自动化脚本：contractfixpro/scripts/payhip-*.js（Playwright + browser-session 复用登录态）
@@ -18,6 +18,12 @@
 ## 关键修复历史
 - [2026-06-24] LawDepot partner CTA 样式修复：6 个接入页统一使用横向 LawDepot 标识，放大 logo 容器；按钮文字强制白色，避免被文章链接样式覆盖；保留 `rel="sponsored noopener nofollow"`。
 - [2026-06-24] LawDepot logo 二次替换：按用户提供截图抠出透明 PNG，6 个 CTA 页引用 `/assets/img/lawdepot-logo.png`。
+
+## 2026-08-31 brand ambassador output safety maintenance
+- Removed three automatic outcomes in `brand-ambassador-contract.html`: fixed three-year confidentiality, independent-contractor classification, and entire-agreement precedence. These now remain open review records, with no signature/acceptance presentation.
+- Preserved the title, existing campaign fields, disclosures, and browser workflow. Corrected retail-value tax and guaranteed-payment wording; added IRS source guidance and the maintenance date. This is a defect correction, not a new SEO experiment or complete page-value approval.
+- Local 1440px/390px browser checks passed: supplied inputs preserved, HTML-like input rendered as text, no page overflow or console errors, old outcomes absent. Three inline scripts parse; one H1 and 29 unique IDs. Central release gate passed.
+- Deployment readback pending at commit time. Hold the corrected page through 2026-09-14; comparisons spanning this change are confounded. Paid downloads were not purchased or verified; no AdSense review submitted.
 
 ## 2026-08-26 virtual assistant service and access record
 - Rebuilt `virtual-assistant-contract.html` output as a factual service and access record while preserving the virtual-assistant-contract search intent and browser workflow.
